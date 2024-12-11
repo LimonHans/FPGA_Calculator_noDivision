@@ -1,0 +1,1890 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Sun Dec  8 17:47:36 2024
+| Host         : Limon-L16P running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file Master_timing_summary_routed.rpt -pb Master_timing_summary_routed.pb -rpx Master_timing_summary_routed.rpx -warn_on_violation
+| Design       : Master
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  432         
+SYNTH-10   Warning           Wide multiplier              3           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (432)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (788)
+5. checking no_input_delay (4)
+6. checking no_output_delay (20)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (432)
+--------------------------
+ There are 99 register/latch pins with no clock driven by root clock pin: resonator_clk (HIGH)
+
+ There are 27 register/latch pins with no clock driven by root clock pin: clk_g_10Khz/clk_reg/Q (HIGH)
+
+ There are 28 register/latch pins with no clock driven by root clock pin: clk_g_1Khz/clk_reg/Q (HIGH)
+
+ There are 278 register/latch pins with no clock driven by root clock pin: clk_g_1Mhz/clk_reg/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (788)
+--------------------------------------------------
+ There are 788 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (4)
+------------------------------
+ There are 4 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (20)
+--------------------------------
+ There are 20 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  808          inf        0.000                      0                  808           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           808 Endpoints
+Min Delay           808 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 dataNum1/value_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CON_A
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        46.032ns  (logic 14.515ns (31.532%)  route 31.518ns (68.468%))
+  Logic Levels:           55  (CARRY4=31 FDRE=1 LUT2=2 LUT3=5 LUT4=3 LUT5=3 LUT6=7 MUXF7=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y72         FDRE                         0.000     0.000 r  dataNum1/value_reg[0]/C
+    SLICE_X92Y72         FDRE (Prop_fdre_C_Q)         0.433     0.433 r  dataNum1/value_reg[0]/Q
+                         net (fo=90, routed)          4.807     5.240    instructor/value_reg[31]_11[0]
+    SLICE_X82Y92         LUT5 (Prop_lut5_I4_O)        0.105     5.345 r  instructor/CON_A_OBUF_inst_i_1364/O
+                         net (fo=127, routed)         1.610     6.955    instructor/value_reg[30]_2[0]
+    SLICE_X92Y90         LUT3 (Prop_lut3_I1_O)        0.105     7.060 r  instructor/CON_A_OBUF_inst_i_2041/O
+                         net (fo=9, routed)           1.548     8.607    interMasterDisplay/CON_A_OBUF_inst_i_3246_0[2]
+    SLICE_X61Y91         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.318     8.925 r  interMasterDisplay/CON_A_OBUF_inst_i_3606/CO[3]
+                         net (fo=1, routed)           0.000     8.925    interMasterDisplay/CON_A_OBUF_inst_i_3606_n_0
+    SLICE_X61Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.023 r  interMasterDisplay/CON_A_OBUF_inst_i_3859/CO[3]
+                         net (fo=1, routed)           0.000     9.023    interMasterDisplay/CON_A_OBUF_inst_i_3859_n_0
+    SLICE_X61Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.121 r  interMasterDisplay/CON_A_OBUF_inst_i_3780/CO[3]
+                         net (fo=1, routed)           0.000     9.121    interMasterDisplay/CON_A_OBUF_inst_i_3780_n_0
+    SLICE_X61Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.219 r  interMasterDisplay/CON_A_OBUF_inst_i_3605/CO[3]
+                         net (fo=1, routed)           0.000     9.219    interMasterDisplay/CON_A_OBUF_inst_i_3605_n_0
+    SLICE_X61Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.317 r  interMasterDisplay/CON_A_OBUF_inst_i_3253/CO[3]
+                         net (fo=1, routed)           0.000     9.317    interMasterDisplay/CON_A_OBUF_inst_i_3253_n_0
+    SLICE_X61Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.415 r  interMasterDisplay/CON_A_OBUF_inst_i_2736/CO[3]
+                         net (fo=1, routed)           0.000     9.415    interMasterDisplay/CON_A_OBUF_inst_i_2736_n_0
+    SLICE_X61Y97         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.200     9.615 r  interMasterDisplay/CON_A_OBUF_inst_i_2108/O[2]
+                         net (fo=2, routed)           0.902    10.517    interMasterDisplay/CON_A_OBUF_inst_i_2108_n_5
+    SLICE_X66Y97         LUT3 (Prop_lut3_I2_O)        0.253    10.770 r  interMasterDisplay/CON_A_OBUF_inst_i_1389/O
+                         net (fo=2, routed)           1.019    11.789    interMasterDisplay/CON_A_OBUF_inst_i_1389_n_0
+    SLICE_X62Y97         LUT4 (Prop_lut4_I3_O)        0.105    11.894 r  interMasterDisplay/CON_A_OBUF_inst_i_1393/O
+                         net (fo=1, routed)           0.000    11.894    interMasterDisplay/CON_A_OBUF_inst_i_1393_n_0
+    SLICE_X62Y97         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.316    12.210 r  interMasterDisplay/CON_A_OBUF_inst_i_768/CO[3]
+                         net (fo=1, routed)           0.000    12.210    interMasterDisplay/CON_A_OBUF_inst_i_768_n_0
+    SLICE_X62Y98         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    12.388 r  interMasterDisplay/CON_A_OBUF_inst_i_765/O[0]
+                         net (fo=2, routed)           0.555    12.943    interMasterDisplay/CON_A_OBUF_inst_i_765_n_7
+    SLICE_X58Y98         LUT3 (Prop_lut3_I0_O)        0.238    13.181 r  interMasterDisplay/CON_A_OBUF_inst_i_391/O
+                         net (fo=2, routed)           0.723    13.904    interMasterDisplay/CON_A_OBUF_inst_i_391_n_0
+    SLICE_X59Y98         LUT4 (Prop_lut4_I3_O)        0.105    14.009 r  interMasterDisplay/CON_A_OBUF_inst_i_395/O
+                         net (fo=1, routed)           0.000    14.009    interMasterDisplay/CON_A_OBUF_inst_i_395_n_0
+    SLICE_X59Y98         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.466 r  interMasterDisplay/CON_A_OBUF_inst_i_197/CO[3]
+                         net (fo=1, routed)           0.000    14.466    interMasterDisplay/CON_A_OBUF_inst_i_197_n_0
+    SLICE_X59Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    14.731 r  interMasterDisplay/CON_A_OBUF_inst_i_656/O[1]
+                         net (fo=20, routed)          1.320    16.051    interMasterDisplay/CON_A_OBUF_inst_i_656_n_6
+    SLICE_X81Y101        LUT2 (Prop_lut2_I0_O)        0.250    16.301 r  interMasterDisplay/CON_A_OBUF_inst_i_3632/O
+                         net (fo=1, routed)           0.000    16.301    interMasterDisplay/CON_A_OBUF_inst_i_3632_n_0
+    SLICE_X81Y101        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.440    16.741 r  interMasterDisplay/CON_A_OBUF_inst_i_3275/CO[3]
+                         net (fo=1, routed)           0.000    16.741    interMasterDisplay/CON_A_OBUF_inst_i_3275_n_0
+    SLICE_X81Y102        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    16.921 r  interMasterDisplay/CON_A_OBUF_inst_i_2802/O[0]
+                         net (fo=3, routed)           1.126    18.047    instructor/CON_A_OBUF_inst_i_2109[0]
+    SLICE_X91Y103        LUT6 (Prop_lut6_I0_O)        0.249    18.296 r  instructor/CON_A_OBUF_inst_i_3269/O
+                         net (fo=1, routed)           0.703    18.999    interMasterDisplay/CON_A_OBUF_inst_i_2109_0[1]
+    SLICE_X85Y103        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    19.417 r  interMasterDisplay/CON_A_OBUF_inst_i_2793/CO[3]
+                         net (fo=1, routed)           0.000    19.417    interMasterDisplay/CON_A_OBUF_inst_i_2793_n_0
+    SLICE_X85Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.515 r  interMasterDisplay/CON_A_OBUF_inst_i_2109/CO[3]
+                         net (fo=1, routed)           0.000    19.515    interMasterDisplay/CON_A_OBUF_inst_i_2109_n_0
+    SLICE_X85Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.613 r  interMasterDisplay/CON_A_OBUF_inst_i_1412/CO[3]
+                         net (fo=1, routed)           0.000    19.613    interMasterDisplay/CON_A_OBUF_inst_i_1412_n_0
+    SLICE_X85Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.711 r  interMasterDisplay/CON_A_OBUF_inst_i_771/CO[3]
+                         net (fo=1, routed)           0.000    19.711    interMasterDisplay/CON_A_OBUF_inst_i_771_n_0
+    SLICE_X85Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.809 r  interMasterDisplay/CON_A_OBUF_inst_i_397/CO[3]
+                         net (fo=1, routed)           0.000    19.809    interMasterDisplay/CON_A_OBUF_inst_i_397_n_0
+    SLICE_X85Y108        CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    19.941 r  interMasterDisplay/CON_A_OBUF_inst_i_198/CO[1]
+                         net (fo=44, routed)          1.999    21.940    interMasterDisplay/CON_A_OBUF_inst_i_198_n_2
+    SLICE_X83Y118        LUT3 (Prop_lut3_I0_O)        0.275    22.215 r  interMasterDisplay/CON_A_OBUF_inst_i_2209/O
+                         net (fo=152, routed)         2.502    24.717    interMasterDisplay/CON_A_OBUF_inst_i_2209_n_0
+    SLICE_X82Y110        LUT6 (Prop_lut6_I3_O)        0.105    24.822 r  interMasterDisplay/CON_A_OBUF_inst_i_2188/O
+                         net (fo=4, routed)           1.046    25.868    interMasterDisplay/CON_A_OBUF_inst_i_2188_n_0
+    SLICE_X86Y112        LUT6 (Prop_lut6_I0_O)        0.105    25.973 r  interMasterDisplay/CON_A_OBUF_inst_i_3662/O
+                         net (fo=1, routed)           0.000    25.973    interMasterDisplay/CON_A_OBUF_inst_i_3662_n_0
+    SLICE_X86Y112        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.444    26.417 r  interMasterDisplay/CON_A_OBUF_inst_i_3319/CO[3]
+                         net (fo=1, routed)           0.000    26.417    interMasterDisplay/CON_A_OBUF_inst_i_3319_n_0
+    SLICE_X86Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.517 r  interMasterDisplay/CON_A_OBUF_inst_i_2849/CO[3]
+                         net (fo=1, routed)           0.000    26.517    interMasterDisplay/CON_A_OBUF_inst_i_2849_n_0
+    SLICE_X86Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.617 r  interMasterDisplay/CON_A_OBUF_inst_i_2171/CO[3]
+                         net (fo=1, routed)           0.000    26.617    interMasterDisplay/CON_A_OBUF_inst_i_2171_n_0
+    SLICE_X86Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.717 r  interMasterDisplay/CON_A_OBUF_inst_i_1456/CO[3]
+                         net (fo=1, routed)           0.000    26.717    interMasterDisplay/CON_A_OBUF_inst_i_1456_n_0
+    SLICE_X86Y116        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    26.895 r  interMasterDisplay/CON_A_OBUF_inst_i_2210/O[0]
+                         net (fo=3, routed)           1.450    28.345    interMasterDisplay/CON_A_OBUF_inst_i_2210_n_7
+    SLICE_X80Y110        LUT6 (Prop_lut6_I0_O)        0.238    28.583 r  interMasterDisplay/CON_A_OBUF_inst_i_1470/O
+                         net (fo=1, routed)           0.264    28.847    interMasterDisplay/CON_A_OBUF_inst_i_1470_n_0
+    SLICE_X80Y112        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    29.265 r  interMasterDisplay/CON_A_OBUF_inst_i_809/CO[3]
+                         net (fo=1, routed)           0.000    29.265    interMasterDisplay/CON_A_OBUF_inst_i_809_n_0
+    SLICE_X80Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    29.445 r  interMasterDisplay/CON_A_OBUF_inst_i_821/O[0]
+                         net (fo=4, routed)           0.700    30.145    interMasterDisplay/CON_A_OBUF_inst_i_821_n_7
+    SLICE_X82Y117        LUT3 (Prop_lut3_I2_O)        0.249    30.394 r  interMasterDisplay/CON_A_OBUF_inst_i_813/O
+                         net (fo=1, routed)           0.784    31.178    interMasterDisplay/CON_A_OBUF_inst_i_813_n_0
+    SLICE_X80Y117        LUT5 (Prop_lut5_I4_O)        0.105    31.283 r  interMasterDisplay/CON_A_OBUF_inst_i_410/O
+                         net (fo=2, routed)           0.836    32.120    interMasterDisplay/CON_A_OBUF_inst_i_410_n_0
+    SLICE_X81Y115        LUT6 (Prop_lut6_I0_O)        0.105    32.225 r  interMasterDisplay/CON_A_OBUF_inst_i_414/O
+                         net (fo=1, routed)           0.000    32.225    interMasterDisplay/CON_A_OBUF_inst_i_414_n_0
+    SLICE_X81Y115        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    32.557 r  interMasterDisplay/CON_A_OBUF_inst_i_203/CO[3]
+                         net (fo=1, routed)           0.000    32.557    interMasterDisplay/CON_A_OBUF_inst_i_203_n_0
+    SLICE_X81Y116        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    32.822 r  interMasterDisplay/CON_A_OBUF_inst_i_406/O[1]
+                         net (fo=2, routed)           0.679    33.501    interMasterDisplay/CON_A_OBUF_inst_i_406_n_6
+    SLICE_X81Y118        LUT2 (Prop_lut2_I0_O)        0.250    33.751 r  interMasterDisplay/CON_A_OBUF_inst_i_408/O
+                         net (fo=1, routed)           0.000    33.751    interMasterDisplay/CON_A_OBUF_inst_i_408_n_0
+    SLICE_X81Y118        CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.187    33.938 r  interMasterDisplay/CON_A_OBUF_inst_i_202/O[1]
+                         net (fo=1, routed)           0.773    34.711    interMasterDisplay/CON_A_OBUF_inst_i_202_n_6
+    SLICE_X83Y110        LUT6 (Prop_lut6_I5_O)        0.250    34.961 r  interMasterDisplay/CON_A_OBUF_inst_i_90/O
+                         net (fo=1, routed)           0.000    34.961    interMasterDisplay/CON_A_OBUF_inst_i_90_n_0
+    SLICE_X83Y110        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    35.293 r  interMasterDisplay/CON_A_OBUF_inst_i_29/CO[3]
+                         net (fo=1, routed)           0.000    35.293    interMasterDisplay/CON_A_OBUF_inst_i_29_n_0
+    SLICE_X83Y111        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    35.473 r  interMasterDisplay/CON_A_OBUF_inst_i_172/O[0]
+                         net (fo=3, routed)           1.211    36.684    interMasterDisplay/CON_A_OBUF_inst_i_172_n_7
+    SLICE_X94Y107        LUT5 (Prop_lut5_I3_O)        0.249    36.933 r  interMasterDisplay/CON_A_OBUF_inst_i_66/O
+                         net (fo=1, routed)           0.000    36.933    interMasterDisplay/display/DS6[1]
+    SLICE_X94Y107        MUXF7 (Prop_muxf7_I0_O)      0.173    37.106 r  interMasterDisplay/display/CON_A_OBUF_inst_i_19/O
+                         net (fo=1, routed)           0.907    38.013    interMasterDisplay/display/CON_A_OBUF_inst_i_19_n_0
+    SLICE_X103Y107       LUT6 (Prop_lut6_I0_O)        0.241    38.254 r  interMasterDisplay/display/CON_A_OBUF_inst_i_7/O
+                         net (fo=1, routed)           0.000    38.254    interMasterDisplay/display/CON_A_OBUF_inst_i_7_n_0
+    SLICE_X103Y107       MUXF7 (Prop_muxf7_I1_O)      0.182    38.436 r  interMasterDisplay/display/CON_A_OBUF_inst_i_2/O
+                         net (fo=8, routed)           2.172    40.608    interMasterDisplay/display/num_reg[2]_1
+    SLICE_X113Y74        LUT4 (Prop_lut4_I0_O)        0.252    40.860 r  interMasterDisplay/display/CON_A_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.882    42.742    CON_A_OBUF
+    W18                  OBUF (Prop_obuf_I_O)         3.291    46.032 r  CON_A_OBUF_inst/O
+                         net (fo=0)                   0.000    46.032    CON_A
+    W18                                                               r  CON_A (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dataNum1/value_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CON_D
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        45.988ns  (logic 14.785ns (32.151%)  route 31.202ns (67.849%))
+  Logic Levels:           55  (CARRY4=31 FDRE=1 LUT2=2 LUT3=5 LUT4=3 LUT5=3 LUT6=7 MUXF7=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y72         FDRE                         0.000     0.000 r  dataNum1/value_reg[0]/C
+    SLICE_X92Y72         FDRE (Prop_fdre_C_Q)         0.433     0.433 r  dataNum1/value_reg[0]/Q
+                         net (fo=90, routed)          4.807     5.240    instructor/value_reg[31]_11[0]
+    SLICE_X82Y92         LUT5 (Prop_lut5_I4_O)        0.105     5.345 r  instructor/CON_A_OBUF_inst_i_1364/O
+                         net (fo=127, routed)         1.610     6.955    instructor/value_reg[30]_2[0]
+    SLICE_X92Y90         LUT3 (Prop_lut3_I1_O)        0.105     7.060 r  instructor/CON_A_OBUF_inst_i_2041/O
+                         net (fo=9, routed)           1.548     8.607    interMasterDisplay/CON_A_OBUF_inst_i_3246_0[2]
+    SLICE_X61Y91         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.318     8.925 r  interMasterDisplay/CON_A_OBUF_inst_i_3606/CO[3]
+                         net (fo=1, routed)           0.000     8.925    interMasterDisplay/CON_A_OBUF_inst_i_3606_n_0
+    SLICE_X61Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.023 r  interMasterDisplay/CON_A_OBUF_inst_i_3859/CO[3]
+                         net (fo=1, routed)           0.000     9.023    interMasterDisplay/CON_A_OBUF_inst_i_3859_n_0
+    SLICE_X61Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.121 r  interMasterDisplay/CON_A_OBUF_inst_i_3780/CO[3]
+                         net (fo=1, routed)           0.000     9.121    interMasterDisplay/CON_A_OBUF_inst_i_3780_n_0
+    SLICE_X61Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.219 r  interMasterDisplay/CON_A_OBUF_inst_i_3605/CO[3]
+                         net (fo=1, routed)           0.000     9.219    interMasterDisplay/CON_A_OBUF_inst_i_3605_n_0
+    SLICE_X61Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.317 r  interMasterDisplay/CON_A_OBUF_inst_i_3253/CO[3]
+                         net (fo=1, routed)           0.000     9.317    interMasterDisplay/CON_A_OBUF_inst_i_3253_n_0
+    SLICE_X61Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.415 r  interMasterDisplay/CON_A_OBUF_inst_i_2736/CO[3]
+                         net (fo=1, routed)           0.000     9.415    interMasterDisplay/CON_A_OBUF_inst_i_2736_n_0
+    SLICE_X61Y97         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.200     9.615 r  interMasterDisplay/CON_A_OBUF_inst_i_2108/O[2]
+                         net (fo=2, routed)           0.902    10.517    interMasterDisplay/CON_A_OBUF_inst_i_2108_n_5
+    SLICE_X66Y97         LUT3 (Prop_lut3_I2_O)        0.253    10.770 r  interMasterDisplay/CON_A_OBUF_inst_i_1389/O
+                         net (fo=2, routed)           1.019    11.789    interMasterDisplay/CON_A_OBUF_inst_i_1389_n_0
+    SLICE_X62Y97         LUT4 (Prop_lut4_I3_O)        0.105    11.894 r  interMasterDisplay/CON_A_OBUF_inst_i_1393/O
+                         net (fo=1, routed)           0.000    11.894    interMasterDisplay/CON_A_OBUF_inst_i_1393_n_0
+    SLICE_X62Y97         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.316    12.210 r  interMasterDisplay/CON_A_OBUF_inst_i_768/CO[3]
+                         net (fo=1, routed)           0.000    12.210    interMasterDisplay/CON_A_OBUF_inst_i_768_n_0
+    SLICE_X62Y98         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    12.388 r  interMasterDisplay/CON_A_OBUF_inst_i_765/O[0]
+                         net (fo=2, routed)           0.555    12.943    interMasterDisplay/CON_A_OBUF_inst_i_765_n_7
+    SLICE_X58Y98         LUT3 (Prop_lut3_I0_O)        0.238    13.181 r  interMasterDisplay/CON_A_OBUF_inst_i_391/O
+                         net (fo=2, routed)           0.723    13.904    interMasterDisplay/CON_A_OBUF_inst_i_391_n_0
+    SLICE_X59Y98         LUT4 (Prop_lut4_I3_O)        0.105    14.009 r  interMasterDisplay/CON_A_OBUF_inst_i_395/O
+                         net (fo=1, routed)           0.000    14.009    interMasterDisplay/CON_A_OBUF_inst_i_395_n_0
+    SLICE_X59Y98         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.466 r  interMasterDisplay/CON_A_OBUF_inst_i_197/CO[3]
+                         net (fo=1, routed)           0.000    14.466    interMasterDisplay/CON_A_OBUF_inst_i_197_n_0
+    SLICE_X59Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    14.731 r  interMasterDisplay/CON_A_OBUF_inst_i_656/O[1]
+                         net (fo=20, routed)          1.320    16.051    interMasterDisplay/CON_A_OBUF_inst_i_656_n_6
+    SLICE_X81Y101        LUT2 (Prop_lut2_I0_O)        0.250    16.301 r  interMasterDisplay/CON_A_OBUF_inst_i_3632/O
+                         net (fo=1, routed)           0.000    16.301    interMasterDisplay/CON_A_OBUF_inst_i_3632_n_0
+    SLICE_X81Y101        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.440    16.741 r  interMasterDisplay/CON_A_OBUF_inst_i_3275/CO[3]
+                         net (fo=1, routed)           0.000    16.741    interMasterDisplay/CON_A_OBUF_inst_i_3275_n_0
+    SLICE_X81Y102        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    16.921 r  interMasterDisplay/CON_A_OBUF_inst_i_2802/O[0]
+                         net (fo=3, routed)           1.126    18.047    instructor/CON_A_OBUF_inst_i_2109[0]
+    SLICE_X91Y103        LUT6 (Prop_lut6_I0_O)        0.249    18.296 r  instructor/CON_A_OBUF_inst_i_3269/O
+                         net (fo=1, routed)           0.703    18.999    interMasterDisplay/CON_A_OBUF_inst_i_2109_0[1]
+    SLICE_X85Y103        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    19.417 r  interMasterDisplay/CON_A_OBUF_inst_i_2793/CO[3]
+                         net (fo=1, routed)           0.000    19.417    interMasterDisplay/CON_A_OBUF_inst_i_2793_n_0
+    SLICE_X85Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.515 r  interMasterDisplay/CON_A_OBUF_inst_i_2109/CO[3]
+                         net (fo=1, routed)           0.000    19.515    interMasterDisplay/CON_A_OBUF_inst_i_2109_n_0
+    SLICE_X85Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.613 r  interMasterDisplay/CON_A_OBUF_inst_i_1412/CO[3]
+                         net (fo=1, routed)           0.000    19.613    interMasterDisplay/CON_A_OBUF_inst_i_1412_n_0
+    SLICE_X85Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.711 r  interMasterDisplay/CON_A_OBUF_inst_i_771/CO[3]
+                         net (fo=1, routed)           0.000    19.711    interMasterDisplay/CON_A_OBUF_inst_i_771_n_0
+    SLICE_X85Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.809 r  interMasterDisplay/CON_A_OBUF_inst_i_397/CO[3]
+                         net (fo=1, routed)           0.000    19.809    interMasterDisplay/CON_A_OBUF_inst_i_397_n_0
+    SLICE_X85Y108        CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    19.941 r  interMasterDisplay/CON_A_OBUF_inst_i_198/CO[1]
+                         net (fo=44, routed)          1.999    21.940    interMasterDisplay/CON_A_OBUF_inst_i_198_n_2
+    SLICE_X83Y118        LUT3 (Prop_lut3_I0_O)        0.275    22.215 r  interMasterDisplay/CON_A_OBUF_inst_i_2209/O
+                         net (fo=152, routed)         2.502    24.717    interMasterDisplay/CON_A_OBUF_inst_i_2209_n_0
+    SLICE_X82Y110        LUT6 (Prop_lut6_I3_O)        0.105    24.822 r  interMasterDisplay/CON_A_OBUF_inst_i_2188/O
+                         net (fo=4, routed)           1.046    25.868    interMasterDisplay/CON_A_OBUF_inst_i_2188_n_0
+    SLICE_X86Y112        LUT6 (Prop_lut6_I0_O)        0.105    25.973 r  interMasterDisplay/CON_A_OBUF_inst_i_3662/O
+                         net (fo=1, routed)           0.000    25.973    interMasterDisplay/CON_A_OBUF_inst_i_3662_n_0
+    SLICE_X86Y112        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.444    26.417 r  interMasterDisplay/CON_A_OBUF_inst_i_3319/CO[3]
+                         net (fo=1, routed)           0.000    26.417    interMasterDisplay/CON_A_OBUF_inst_i_3319_n_0
+    SLICE_X86Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.517 r  interMasterDisplay/CON_A_OBUF_inst_i_2849/CO[3]
+                         net (fo=1, routed)           0.000    26.517    interMasterDisplay/CON_A_OBUF_inst_i_2849_n_0
+    SLICE_X86Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.617 r  interMasterDisplay/CON_A_OBUF_inst_i_2171/CO[3]
+                         net (fo=1, routed)           0.000    26.617    interMasterDisplay/CON_A_OBUF_inst_i_2171_n_0
+    SLICE_X86Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.717 r  interMasterDisplay/CON_A_OBUF_inst_i_1456/CO[3]
+                         net (fo=1, routed)           0.000    26.717    interMasterDisplay/CON_A_OBUF_inst_i_1456_n_0
+    SLICE_X86Y116        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    26.895 r  interMasterDisplay/CON_A_OBUF_inst_i_2210/O[0]
+                         net (fo=3, routed)           1.450    28.345    interMasterDisplay/CON_A_OBUF_inst_i_2210_n_7
+    SLICE_X80Y110        LUT6 (Prop_lut6_I0_O)        0.238    28.583 r  interMasterDisplay/CON_A_OBUF_inst_i_1470/O
+                         net (fo=1, routed)           0.264    28.847    interMasterDisplay/CON_A_OBUF_inst_i_1470_n_0
+    SLICE_X80Y112        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    29.265 r  interMasterDisplay/CON_A_OBUF_inst_i_809/CO[3]
+                         net (fo=1, routed)           0.000    29.265    interMasterDisplay/CON_A_OBUF_inst_i_809_n_0
+    SLICE_X80Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    29.445 r  interMasterDisplay/CON_A_OBUF_inst_i_821/O[0]
+                         net (fo=4, routed)           0.700    30.145    interMasterDisplay/CON_A_OBUF_inst_i_821_n_7
+    SLICE_X82Y117        LUT3 (Prop_lut3_I2_O)        0.249    30.394 r  interMasterDisplay/CON_A_OBUF_inst_i_813/O
+                         net (fo=1, routed)           0.784    31.178    interMasterDisplay/CON_A_OBUF_inst_i_813_n_0
+    SLICE_X80Y117        LUT5 (Prop_lut5_I4_O)        0.105    31.283 r  interMasterDisplay/CON_A_OBUF_inst_i_410/O
+                         net (fo=2, routed)           0.836    32.120    interMasterDisplay/CON_A_OBUF_inst_i_410_n_0
+    SLICE_X81Y115        LUT6 (Prop_lut6_I0_O)        0.105    32.225 r  interMasterDisplay/CON_A_OBUF_inst_i_414/O
+                         net (fo=1, routed)           0.000    32.225    interMasterDisplay/CON_A_OBUF_inst_i_414_n_0
+    SLICE_X81Y115        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    32.557 r  interMasterDisplay/CON_A_OBUF_inst_i_203/CO[3]
+                         net (fo=1, routed)           0.000    32.557    interMasterDisplay/CON_A_OBUF_inst_i_203_n_0
+    SLICE_X81Y116        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    32.822 r  interMasterDisplay/CON_A_OBUF_inst_i_406/O[1]
+                         net (fo=2, routed)           0.679    33.501    interMasterDisplay/CON_A_OBUF_inst_i_406_n_6
+    SLICE_X81Y118        LUT2 (Prop_lut2_I0_O)        0.250    33.751 r  interMasterDisplay/CON_A_OBUF_inst_i_408/O
+                         net (fo=1, routed)           0.000    33.751    interMasterDisplay/CON_A_OBUF_inst_i_408_n_0
+    SLICE_X81Y118        CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.187    33.938 r  interMasterDisplay/CON_A_OBUF_inst_i_202/O[1]
+                         net (fo=1, routed)           0.773    34.711    interMasterDisplay/CON_A_OBUF_inst_i_202_n_6
+    SLICE_X83Y110        LUT6 (Prop_lut6_I5_O)        0.250    34.961 r  interMasterDisplay/CON_A_OBUF_inst_i_90/O
+                         net (fo=1, routed)           0.000    34.961    interMasterDisplay/CON_A_OBUF_inst_i_90_n_0
+    SLICE_X83Y110        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    35.293 r  interMasterDisplay/CON_A_OBUF_inst_i_29/CO[3]
+                         net (fo=1, routed)           0.000    35.293    interMasterDisplay/CON_A_OBUF_inst_i_29_n_0
+    SLICE_X83Y111        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    35.473 r  interMasterDisplay/CON_A_OBUF_inst_i_172/O[0]
+                         net (fo=3, routed)           1.211    36.684    interMasterDisplay/CON_A_OBUF_inst_i_172_n_7
+    SLICE_X94Y107        LUT5 (Prop_lut5_I3_O)        0.249    36.933 r  interMasterDisplay/CON_A_OBUF_inst_i_66/O
+                         net (fo=1, routed)           0.000    36.933    interMasterDisplay/display/DS6[1]
+    SLICE_X94Y107        MUXF7 (Prop_muxf7_I0_O)      0.173    37.106 r  interMasterDisplay/display/CON_A_OBUF_inst_i_19/O
+                         net (fo=1, routed)           0.907    38.013    interMasterDisplay/display/CON_A_OBUF_inst_i_19_n_0
+    SLICE_X103Y107       LUT6 (Prop_lut6_I0_O)        0.241    38.254 r  interMasterDisplay/display/CON_A_OBUF_inst_i_7/O
+                         net (fo=1, routed)           0.000    38.254    interMasterDisplay/display/CON_A_OBUF_inst_i_7_n_0
+    SLICE_X103Y107       MUXF7 (Prop_muxf7_I1_O)      0.182    38.436 r  interMasterDisplay/display/CON_A_OBUF_inst_i_2/O
+                         net (fo=8, routed)           2.172    40.608    interMasterDisplay/display/num_reg[2]_1
+    SLICE_X113Y74        LUT4 (Prop_lut4_I0_O)        0.273    40.881 r  interMasterDisplay/display/CON_D_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.567    42.447    CON_D_OBUF
+    V15                  OBUF (Prop_obuf_I_O)         3.540    45.988 r  CON_D_OBUF_inst/O
+                         net (fo=0)                   0.000    45.988    CON_D
+    V15                                                               r  CON_D (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dataNum1/value_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CON_DP
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        45.944ns  (logic 14.504ns (31.569%)  route 31.440ns (68.431%))
+  Logic Levels:           55  (CARRY4=31 FDRE=1 LUT2=2 LUT3=5 LUT4=2 LUT5=4 LUT6=7 MUXF7=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y72         FDRE                         0.000     0.000 r  dataNum1/value_reg[0]/C
+    SLICE_X92Y72         FDRE (Prop_fdre_C_Q)         0.433     0.433 r  dataNum1/value_reg[0]/Q
+                         net (fo=90, routed)          4.807     5.240    instructor/value_reg[31]_11[0]
+    SLICE_X82Y92         LUT5 (Prop_lut5_I4_O)        0.105     5.345 r  instructor/CON_A_OBUF_inst_i_1364/O
+                         net (fo=127, routed)         1.610     6.955    instructor/value_reg[30]_2[0]
+    SLICE_X92Y90         LUT3 (Prop_lut3_I1_O)        0.105     7.060 r  instructor/CON_A_OBUF_inst_i_2041/O
+                         net (fo=9, routed)           1.548     8.607    interMasterDisplay/CON_A_OBUF_inst_i_3246_0[2]
+    SLICE_X61Y91         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.318     8.925 r  interMasterDisplay/CON_A_OBUF_inst_i_3606/CO[3]
+                         net (fo=1, routed)           0.000     8.925    interMasterDisplay/CON_A_OBUF_inst_i_3606_n_0
+    SLICE_X61Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.023 r  interMasterDisplay/CON_A_OBUF_inst_i_3859/CO[3]
+                         net (fo=1, routed)           0.000     9.023    interMasterDisplay/CON_A_OBUF_inst_i_3859_n_0
+    SLICE_X61Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.121 r  interMasterDisplay/CON_A_OBUF_inst_i_3780/CO[3]
+                         net (fo=1, routed)           0.000     9.121    interMasterDisplay/CON_A_OBUF_inst_i_3780_n_0
+    SLICE_X61Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.219 r  interMasterDisplay/CON_A_OBUF_inst_i_3605/CO[3]
+                         net (fo=1, routed)           0.000     9.219    interMasterDisplay/CON_A_OBUF_inst_i_3605_n_0
+    SLICE_X61Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.317 r  interMasterDisplay/CON_A_OBUF_inst_i_3253/CO[3]
+                         net (fo=1, routed)           0.000     9.317    interMasterDisplay/CON_A_OBUF_inst_i_3253_n_0
+    SLICE_X61Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.415 r  interMasterDisplay/CON_A_OBUF_inst_i_2736/CO[3]
+                         net (fo=1, routed)           0.000     9.415    interMasterDisplay/CON_A_OBUF_inst_i_2736_n_0
+    SLICE_X61Y97         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.200     9.615 r  interMasterDisplay/CON_A_OBUF_inst_i_2108/O[2]
+                         net (fo=2, routed)           0.902    10.517    interMasterDisplay/CON_A_OBUF_inst_i_2108_n_5
+    SLICE_X66Y97         LUT3 (Prop_lut3_I2_O)        0.253    10.770 r  interMasterDisplay/CON_A_OBUF_inst_i_1389/O
+                         net (fo=2, routed)           1.019    11.789    interMasterDisplay/CON_A_OBUF_inst_i_1389_n_0
+    SLICE_X62Y97         LUT4 (Prop_lut4_I3_O)        0.105    11.894 r  interMasterDisplay/CON_A_OBUF_inst_i_1393/O
+                         net (fo=1, routed)           0.000    11.894    interMasterDisplay/CON_A_OBUF_inst_i_1393_n_0
+    SLICE_X62Y97         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.316    12.210 r  interMasterDisplay/CON_A_OBUF_inst_i_768/CO[3]
+                         net (fo=1, routed)           0.000    12.210    interMasterDisplay/CON_A_OBUF_inst_i_768_n_0
+    SLICE_X62Y98         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    12.388 r  interMasterDisplay/CON_A_OBUF_inst_i_765/O[0]
+                         net (fo=2, routed)           0.555    12.943    interMasterDisplay/CON_A_OBUF_inst_i_765_n_7
+    SLICE_X58Y98         LUT3 (Prop_lut3_I0_O)        0.238    13.181 r  interMasterDisplay/CON_A_OBUF_inst_i_391/O
+                         net (fo=2, routed)           0.723    13.904    interMasterDisplay/CON_A_OBUF_inst_i_391_n_0
+    SLICE_X59Y98         LUT4 (Prop_lut4_I3_O)        0.105    14.009 r  interMasterDisplay/CON_A_OBUF_inst_i_395/O
+                         net (fo=1, routed)           0.000    14.009    interMasterDisplay/CON_A_OBUF_inst_i_395_n_0
+    SLICE_X59Y98         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.466 r  interMasterDisplay/CON_A_OBUF_inst_i_197/CO[3]
+                         net (fo=1, routed)           0.000    14.466    interMasterDisplay/CON_A_OBUF_inst_i_197_n_0
+    SLICE_X59Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    14.731 r  interMasterDisplay/CON_A_OBUF_inst_i_656/O[1]
+                         net (fo=20, routed)          1.320    16.051    interMasterDisplay/CON_A_OBUF_inst_i_656_n_6
+    SLICE_X81Y101        LUT2 (Prop_lut2_I0_O)        0.250    16.301 r  interMasterDisplay/CON_A_OBUF_inst_i_3632/O
+                         net (fo=1, routed)           0.000    16.301    interMasterDisplay/CON_A_OBUF_inst_i_3632_n_0
+    SLICE_X81Y101        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.440    16.741 r  interMasterDisplay/CON_A_OBUF_inst_i_3275/CO[3]
+                         net (fo=1, routed)           0.000    16.741    interMasterDisplay/CON_A_OBUF_inst_i_3275_n_0
+    SLICE_X81Y102        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    16.921 r  interMasterDisplay/CON_A_OBUF_inst_i_2802/O[0]
+                         net (fo=3, routed)           1.126    18.047    instructor/CON_A_OBUF_inst_i_2109[0]
+    SLICE_X91Y103        LUT6 (Prop_lut6_I0_O)        0.249    18.296 r  instructor/CON_A_OBUF_inst_i_3269/O
+                         net (fo=1, routed)           0.703    18.999    interMasterDisplay/CON_A_OBUF_inst_i_2109_0[1]
+    SLICE_X85Y103        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    19.417 r  interMasterDisplay/CON_A_OBUF_inst_i_2793/CO[3]
+                         net (fo=1, routed)           0.000    19.417    interMasterDisplay/CON_A_OBUF_inst_i_2793_n_0
+    SLICE_X85Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.515 r  interMasterDisplay/CON_A_OBUF_inst_i_2109/CO[3]
+                         net (fo=1, routed)           0.000    19.515    interMasterDisplay/CON_A_OBUF_inst_i_2109_n_0
+    SLICE_X85Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.613 r  interMasterDisplay/CON_A_OBUF_inst_i_1412/CO[3]
+                         net (fo=1, routed)           0.000    19.613    interMasterDisplay/CON_A_OBUF_inst_i_1412_n_0
+    SLICE_X85Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.711 r  interMasterDisplay/CON_A_OBUF_inst_i_771/CO[3]
+                         net (fo=1, routed)           0.000    19.711    interMasterDisplay/CON_A_OBUF_inst_i_771_n_0
+    SLICE_X85Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.809 r  interMasterDisplay/CON_A_OBUF_inst_i_397/CO[3]
+                         net (fo=1, routed)           0.000    19.809    interMasterDisplay/CON_A_OBUF_inst_i_397_n_0
+    SLICE_X85Y108        CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    19.941 r  interMasterDisplay/CON_A_OBUF_inst_i_198/CO[1]
+                         net (fo=44, routed)          1.999    21.940    interMasterDisplay/CON_A_OBUF_inst_i_198_n_2
+    SLICE_X83Y118        LUT3 (Prop_lut3_I0_O)        0.275    22.215 r  interMasterDisplay/CON_A_OBUF_inst_i_2209/O
+                         net (fo=152, routed)         2.502    24.717    interMasterDisplay/CON_A_OBUF_inst_i_2209_n_0
+    SLICE_X82Y110        LUT6 (Prop_lut6_I3_O)        0.105    24.822 r  interMasterDisplay/CON_A_OBUF_inst_i_2188/O
+                         net (fo=4, routed)           1.046    25.868    interMasterDisplay/CON_A_OBUF_inst_i_2188_n_0
+    SLICE_X86Y112        LUT6 (Prop_lut6_I0_O)        0.105    25.973 r  interMasterDisplay/CON_A_OBUF_inst_i_3662/O
+                         net (fo=1, routed)           0.000    25.973    interMasterDisplay/CON_A_OBUF_inst_i_3662_n_0
+    SLICE_X86Y112        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.444    26.417 r  interMasterDisplay/CON_A_OBUF_inst_i_3319/CO[3]
+                         net (fo=1, routed)           0.000    26.417    interMasterDisplay/CON_A_OBUF_inst_i_3319_n_0
+    SLICE_X86Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.517 r  interMasterDisplay/CON_A_OBUF_inst_i_2849/CO[3]
+                         net (fo=1, routed)           0.000    26.517    interMasterDisplay/CON_A_OBUF_inst_i_2849_n_0
+    SLICE_X86Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.617 r  interMasterDisplay/CON_A_OBUF_inst_i_2171/CO[3]
+                         net (fo=1, routed)           0.000    26.617    interMasterDisplay/CON_A_OBUF_inst_i_2171_n_0
+    SLICE_X86Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.717 r  interMasterDisplay/CON_A_OBUF_inst_i_1456/CO[3]
+                         net (fo=1, routed)           0.000    26.717    interMasterDisplay/CON_A_OBUF_inst_i_1456_n_0
+    SLICE_X86Y116        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    26.895 r  interMasterDisplay/CON_A_OBUF_inst_i_2210/O[0]
+                         net (fo=3, routed)           1.450    28.345    interMasterDisplay/CON_A_OBUF_inst_i_2210_n_7
+    SLICE_X80Y110        LUT6 (Prop_lut6_I0_O)        0.238    28.583 r  interMasterDisplay/CON_A_OBUF_inst_i_1470/O
+                         net (fo=1, routed)           0.264    28.847    interMasterDisplay/CON_A_OBUF_inst_i_1470_n_0
+    SLICE_X80Y112        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    29.265 r  interMasterDisplay/CON_A_OBUF_inst_i_809/CO[3]
+                         net (fo=1, routed)           0.000    29.265    interMasterDisplay/CON_A_OBUF_inst_i_809_n_0
+    SLICE_X80Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    29.445 r  interMasterDisplay/CON_A_OBUF_inst_i_821/O[0]
+                         net (fo=4, routed)           0.700    30.145    interMasterDisplay/CON_A_OBUF_inst_i_821_n_7
+    SLICE_X82Y117        LUT3 (Prop_lut3_I2_O)        0.249    30.394 r  interMasterDisplay/CON_A_OBUF_inst_i_813/O
+                         net (fo=1, routed)           0.784    31.178    interMasterDisplay/CON_A_OBUF_inst_i_813_n_0
+    SLICE_X80Y117        LUT5 (Prop_lut5_I4_O)        0.105    31.283 r  interMasterDisplay/CON_A_OBUF_inst_i_410/O
+                         net (fo=2, routed)           0.836    32.120    interMasterDisplay/CON_A_OBUF_inst_i_410_n_0
+    SLICE_X81Y115        LUT6 (Prop_lut6_I0_O)        0.105    32.225 r  interMasterDisplay/CON_A_OBUF_inst_i_414/O
+                         net (fo=1, routed)           0.000    32.225    interMasterDisplay/CON_A_OBUF_inst_i_414_n_0
+    SLICE_X81Y115        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    32.557 r  interMasterDisplay/CON_A_OBUF_inst_i_203/CO[3]
+                         net (fo=1, routed)           0.000    32.557    interMasterDisplay/CON_A_OBUF_inst_i_203_n_0
+    SLICE_X81Y116        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    32.822 r  interMasterDisplay/CON_A_OBUF_inst_i_406/O[1]
+                         net (fo=2, routed)           0.679    33.501    interMasterDisplay/CON_A_OBUF_inst_i_406_n_6
+    SLICE_X81Y118        LUT2 (Prop_lut2_I0_O)        0.250    33.751 r  interMasterDisplay/CON_A_OBUF_inst_i_408/O
+                         net (fo=1, routed)           0.000    33.751    interMasterDisplay/CON_A_OBUF_inst_i_408_n_0
+    SLICE_X81Y118        CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.187    33.938 r  interMasterDisplay/CON_A_OBUF_inst_i_202/O[1]
+                         net (fo=1, routed)           0.773    34.711    interMasterDisplay/CON_A_OBUF_inst_i_202_n_6
+    SLICE_X83Y110        LUT6 (Prop_lut6_I5_O)        0.250    34.961 r  interMasterDisplay/CON_A_OBUF_inst_i_90/O
+                         net (fo=1, routed)           0.000    34.961    interMasterDisplay/CON_A_OBUF_inst_i_90_n_0
+    SLICE_X83Y110        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    35.293 r  interMasterDisplay/CON_A_OBUF_inst_i_29/CO[3]
+                         net (fo=1, routed)           0.000    35.293    interMasterDisplay/CON_A_OBUF_inst_i_29_n_0
+    SLICE_X83Y111        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    35.473 r  interMasterDisplay/CON_A_OBUF_inst_i_172/O[0]
+                         net (fo=3, routed)           1.211    36.684    interMasterDisplay/CON_A_OBUF_inst_i_172_n_7
+    SLICE_X94Y107        LUT5 (Prop_lut5_I3_O)        0.249    36.933 r  interMasterDisplay/CON_A_OBUF_inst_i_66/O
+                         net (fo=1, routed)           0.000    36.933    interMasterDisplay/display/DS6[1]
+    SLICE_X94Y107        MUXF7 (Prop_muxf7_I0_O)      0.173    37.106 r  interMasterDisplay/display/CON_A_OBUF_inst_i_19/O
+                         net (fo=1, routed)           0.907    38.013    interMasterDisplay/display/CON_A_OBUF_inst_i_19_n_0
+    SLICE_X103Y107       LUT6 (Prop_lut6_I0_O)        0.241    38.254 r  interMasterDisplay/display/CON_A_OBUF_inst_i_7/O
+                         net (fo=1, routed)           0.000    38.254    interMasterDisplay/display/CON_A_OBUF_inst_i_7_n_0
+    SLICE_X103Y107       MUXF7 (Prop_muxf7_I1_O)      0.182    38.436 r  interMasterDisplay/display/CON_A_OBUF_inst_i_2/O
+                         net (fo=8, routed)           2.047    40.483    instructor/CON_DP[1]
+    SLICE_X112Y74        LUT5 (Prop_lut5_I3_O)        0.252    40.735 r  instructor/CON_DP_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.929    42.664    CON_DP_OBUF
+    P15                  OBUF (Prop_obuf_I_O)         3.280    45.944 r  CON_DP_OBUF_inst/O
+                         net (fo=0)                   0.000    45.944    CON_DP
+    P15                                                               r  CON_DP (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dataNum1/value_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CON_G
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        45.895ns  (logic 14.805ns (32.259%)  route 31.090ns (67.741%))
+  Logic Levels:           55  (CARRY4=31 FDRE=1 LUT2=2 LUT3=5 LUT4=3 LUT5=3 LUT6=7 MUXF7=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y72         FDRE                         0.000     0.000 r  dataNum1/value_reg[0]/C
+    SLICE_X92Y72         FDRE (Prop_fdre_C_Q)         0.433     0.433 r  dataNum1/value_reg[0]/Q
+                         net (fo=90, routed)          4.807     5.240    instructor/value_reg[31]_11[0]
+    SLICE_X82Y92         LUT5 (Prop_lut5_I4_O)        0.105     5.345 r  instructor/CON_A_OBUF_inst_i_1364/O
+                         net (fo=127, routed)         1.610     6.955    instructor/value_reg[30]_2[0]
+    SLICE_X92Y90         LUT3 (Prop_lut3_I1_O)        0.105     7.060 r  instructor/CON_A_OBUF_inst_i_2041/O
+                         net (fo=9, routed)           1.548     8.607    interMasterDisplay/CON_A_OBUF_inst_i_3246_0[2]
+    SLICE_X61Y91         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.318     8.925 r  interMasterDisplay/CON_A_OBUF_inst_i_3606/CO[3]
+                         net (fo=1, routed)           0.000     8.925    interMasterDisplay/CON_A_OBUF_inst_i_3606_n_0
+    SLICE_X61Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.023 r  interMasterDisplay/CON_A_OBUF_inst_i_3859/CO[3]
+                         net (fo=1, routed)           0.000     9.023    interMasterDisplay/CON_A_OBUF_inst_i_3859_n_0
+    SLICE_X61Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.121 r  interMasterDisplay/CON_A_OBUF_inst_i_3780/CO[3]
+                         net (fo=1, routed)           0.000     9.121    interMasterDisplay/CON_A_OBUF_inst_i_3780_n_0
+    SLICE_X61Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.219 r  interMasterDisplay/CON_A_OBUF_inst_i_3605/CO[3]
+                         net (fo=1, routed)           0.000     9.219    interMasterDisplay/CON_A_OBUF_inst_i_3605_n_0
+    SLICE_X61Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.317 r  interMasterDisplay/CON_A_OBUF_inst_i_3253/CO[3]
+                         net (fo=1, routed)           0.000     9.317    interMasterDisplay/CON_A_OBUF_inst_i_3253_n_0
+    SLICE_X61Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.415 r  interMasterDisplay/CON_A_OBUF_inst_i_2736/CO[3]
+                         net (fo=1, routed)           0.000     9.415    interMasterDisplay/CON_A_OBUF_inst_i_2736_n_0
+    SLICE_X61Y97         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.200     9.615 r  interMasterDisplay/CON_A_OBUF_inst_i_2108/O[2]
+                         net (fo=2, routed)           0.902    10.517    interMasterDisplay/CON_A_OBUF_inst_i_2108_n_5
+    SLICE_X66Y97         LUT3 (Prop_lut3_I2_O)        0.253    10.770 r  interMasterDisplay/CON_A_OBUF_inst_i_1389/O
+                         net (fo=2, routed)           1.019    11.789    interMasterDisplay/CON_A_OBUF_inst_i_1389_n_0
+    SLICE_X62Y97         LUT4 (Prop_lut4_I3_O)        0.105    11.894 r  interMasterDisplay/CON_A_OBUF_inst_i_1393/O
+                         net (fo=1, routed)           0.000    11.894    interMasterDisplay/CON_A_OBUF_inst_i_1393_n_0
+    SLICE_X62Y97         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.316    12.210 r  interMasterDisplay/CON_A_OBUF_inst_i_768/CO[3]
+                         net (fo=1, routed)           0.000    12.210    interMasterDisplay/CON_A_OBUF_inst_i_768_n_0
+    SLICE_X62Y98         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    12.388 r  interMasterDisplay/CON_A_OBUF_inst_i_765/O[0]
+                         net (fo=2, routed)           0.555    12.943    interMasterDisplay/CON_A_OBUF_inst_i_765_n_7
+    SLICE_X58Y98         LUT3 (Prop_lut3_I0_O)        0.238    13.181 r  interMasterDisplay/CON_A_OBUF_inst_i_391/O
+                         net (fo=2, routed)           0.723    13.904    interMasterDisplay/CON_A_OBUF_inst_i_391_n_0
+    SLICE_X59Y98         LUT4 (Prop_lut4_I3_O)        0.105    14.009 r  interMasterDisplay/CON_A_OBUF_inst_i_395/O
+                         net (fo=1, routed)           0.000    14.009    interMasterDisplay/CON_A_OBUF_inst_i_395_n_0
+    SLICE_X59Y98         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.466 r  interMasterDisplay/CON_A_OBUF_inst_i_197/CO[3]
+                         net (fo=1, routed)           0.000    14.466    interMasterDisplay/CON_A_OBUF_inst_i_197_n_0
+    SLICE_X59Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    14.731 r  interMasterDisplay/CON_A_OBUF_inst_i_656/O[1]
+                         net (fo=20, routed)          1.320    16.051    interMasterDisplay/CON_A_OBUF_inst_i_656_n_6
+    SLICE_X81Y101        LUT2 (Prop_lut2_I0_O)        0.250    16.301 r  interMasterDisplay/CON_A_OBUF_inst_i_3632/O
+                         net (fo=1, routed)           0.000    16.301    interMasterDisplay/CON_A_OBUF_inst_i_3632_n_0
+    SLICE_X81Y101        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.440    16.741 r  interMasterDisplay/CON_A_OBUF_inst_i_3275/CO[3]
+                         net (fo=1, routed)           0.000    16.741    interMasterDisplay/CON_A_OBUF_inst_i_3275_n_0
+    SLICE_X81Y102        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    16.921 r  interMasterDisplay/CON_A_OBUF_inst_i_2802/O[0]
+                         net (fo=3, routed)           1.126    18.047    instructor/CON_A_OBUF_inst_i_2109[0]
+    SLICE_X91Y103        LUT6 (Prop_lut6_I0_O)        0.249    18.296 r  instructor/CON_A_OBUF_inst_i_3269/O
+                         net (fo=1, routed)           0.703    18.999    interMasterDisplay/CON_A_OBUF_inst_i_2109_0[1]
+    SLICE_X85Y103        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    19.417 r  interMasterDisplay/CON_A_OBUF_inst_i_2793/CO[3]
+                         net (fo=1, routed)           0.000    19.417    interMasterDisplay/CON_A_OBUF_inst_i_2793_n_0
+    SLICE_X85Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.515 r  interMasterDisplay/CON_A_OBUF_inst_i_2109/CO[3]
+                         net (fo=1, routed)           0.000    19.515    interMasterDisplay/CON_A_OBUF_inst_i_2109_n_0
+    SLICE_X85Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.613 r  interMasterDisplay/CON_A_OBUF_inst_i_1412/CO[3]
+                         net (fo=1, routed)           0.000    19.613    interMasterDisplay/CON_A_OBUF_inst_i_1412_n_0
+    SLICE_X85Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.711 r  interMasterDisplay/CON_A_OBUF_inst_i_771/CO[3]
+                         net (fo=1, routed)           0.000    19.711    interMasterDisplay/CON_A_OBUF_inst_i_771_n_0
+    SLICE_X85Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.809 r  interMasterDisplay/CON_A_OBUF_inst_i_397/CO[3]
+                         net (fo=1, routed)           0.000    19.809    interMasterDisplay/CON_A_OBUF_inst_i_397_n_0
+    SLICE_X85Y108        CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    19.941 r  interMasterDisplay/CON_A_OBUF_inst_i_198/CO[1]
+                         net (fo=44, routed)          1.999    21.940    interMasterDisplay/CON_A_OBUF_inst_i_198_n_2
+    SLICE_X83Y118        LUT3 (Prop_lut3_I0_O)        0.275    22.215 r  interMasterDisplay/CON_A_OBUF_inst_i_2209/O
+                         net (fo=152, routed)         2.502    24.717    interMasterDisplay/CON_A_OBUF_inst_i_2209_n_0
+    SLICE_X82Y110        LUT6 (Prop_lut6_I3_O)        0.105    24.822 r  interMasterDisplay/CON_A_OBUF_inst_i_2188/O
+                         net (fo=4, routed)           1.046    25.868    interMasterDisplay/CON_A_OBUF_inst_i_2188_n_0
+    SLICE_X86Y112        LUT6 (Prop_lut6_I0_O)        0.105    25.973 r  interMasterDisplay/CON_A_OBUF_inst_i_3662/O
+                         net (fo=1, routed)           0.000    25.973    interMasterDisplay/CON_A_OBUF_inst_i_3662_n_0
+    SLICE_X86Y112        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.444    26.417 r  interMasterDisplay/CON_A_OBUF_inst_i_3319/CO[3]
+                         net (fo=1, routed)           0.000    26.417    interMasterDisplay/CON_A_OBUF_inst_i_3319_n_0
+    SLICE_X86Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.517 r  interMasterDisplay/CON_A_OBUF_inst_i_2849/CO[3]
+                         net (fo=1, routed)           0.000    26.517    interMasterDisplay/CON_A_OBUF_inst_i_2849_n_0
+    SLICE_X86Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.617 r  interMasterDisplay/CON_A_OBUF_inst_i_2171/CO[3]
+                         net (fo=1, routed)           0.000    26.617    interMasterDisplay/CON_A_OBUF_inst_i_2171_n_0
+    SLICE_X86Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.717 r  interMasterDisplay/CON_A_OBUF_inst_i_1456/CO[3]
+                         net (fo=1, routed)           0.000    26.717    interMasterDisplay/CON_A_OBUF_inst_i_1456_n_0
+    SLICE_X86Y116        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    26.895 r  interMasterDisplay/CON_A_OBUF_inst_i_2210/O[0]
+                         net (fo=3, routed)           1.450    28.345    interMasterDisplay/CON_A_OBUF_inst_i_2210_n_7
+    SLICE_X80Y110        LUT6 (Prop_lut6_I0_O)        0.238    28.583 r  interMasterDisplay/CON_A_OBUF_inst_i_1470/O
+                         net (fo=1, routed)           0.264    28.847    interMasterDisplay/CON_A_OBUF_inst_i_1470_n_0
+    SLICE_X80Y112        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    29.265 r  interMasterDisplay/CON_A_OBUF_inst_i_809/CO[3]
+                         net (fo=1, routed)           0.000    29.265    interMasterDisplay/CON_A_OBUF_inst_i_809_n_0
+    SLICE_X80Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    29.445 r  interMasterDisplay/CON_A_OBUF_inst_i_821/O[0]
+                         net (fo=4, routed)           0.700    30.145    interMasterDisplay/CON_A_OBUF_inst_i_821_n_7
+    SLICE_X82Y117        LUT3 (Prop_lut3_I2_O)        0.249    30.394 r  interMasterDisplay/CON_A_OBUF_inst_i_813/O
+                         net (fo=1, routed)           0.784    31.178    interMasterDisplay/CON_A_OBUF_inst_i_813_n_0
+    SLICE_X80Y117        LUT5 (Prop_lut5_I4_O)        0.105    31.283 r  interMasterDisplay/CON_A_OBUF_inst_i_410/O
+                         net (fo=2, routed)           0.836    32.120    interMasterDisplay/CON_A_OBUF_inst_i_410_n_0
+    SLICE_X81Y115        LUT6 (Prop_lut6_I0_O)        0.105    32.225 r  interMasterDisplay/CON_A_OBUF_inst_i_414/O
+                         net (fo=1, routed)           0.000    32.225    interMasterDisplay/CON_A_OBUF_inst_i_414_n_0
+    SLICE_X81Y115        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    32.557 r  interMasterDisplay/CON_A_OBUF_inst_i_203/CO[3]
+                         net (fo=1, routed)           0.000    32.557    interMasterDisplay/CON_A_OBUF_inst_i_203_n_0
+    SLICE_X81Y116        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    32.822 r  interMasterDisplay/CON_A_OBUF_inst_i_406/O[1]
+                         net (fo=2, routed)           0.679    33.501    interMasterDisplay/CON_A_OBUF_inst_i_406_n_6
+    SLICE_X81Y118        LUT2 (Prop_lut2_I0_O)        0.250    33.751 r  interMasterDisplay/CON_A_OBUF_inst_i_408/O
+                         net (fo=1, routed)           0.000    33.751    interMasterDisplay/CON_A_OBUF_inst_i_408_n_0
+    SLICE_X81Y118        CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.187    33.938 r  interMasterDisplay/CON_A_OBUF_inst_i_202/O[1]
+                         net (fo=1, routed)           0.773    34.711    interMasterDisplay/CON_A_OBUF_inst_i_202_n_6
+    SLICE_X83Y110        LUT6 (Prop_lut6_I5_O)        0.250    34.961 r  interMasterDisplay/CON_A_OBUF_inst_i_90/O
+                         net (fo=1, routed)           0.000    34.961    interMasterDisplay/CON_A_OBUF_inst_i_90_n_0
+    SLICE_X83Y110        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    35.293 r  interMasterDisplay/CON_A_OBUF_inst_i_29/CO[3]
+                         net (fo=1, routed)           0.000    35.293    interMasterDisplay/CON_A_OBUF_inst_i_29_n_0
+    SLICE_X83Y111        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    35.473 r  interMasterDisplay/CON_A_OBUF_inst_i_172/O[0]
+                         net (fo=3, routed)           1.211    36.684    interMasterDisplay/CON_A_OBUF_inst_i_172_n_7
+    SLICE_X94Y107        LUT5 (Prop_lut5_I3_O)        0.249    36.933 r  interMasterDisplay/CON_A_OBUF_inst_i_66/O
+                         net (fo=1, routed)           0.000    36.933    interMasterDisplay/display/DS6[1]
+    SLICE_X94Y107        MUXF7 (Prop_muxf7_I0_O)      0.173    37.106 r  interMasterDisplay/display/CON_A_OBUF_inst_i_19/O
+                         net (fo=1, routed)           0.907    38.013    interMasterDisplay/display/CON_A_OBUF_inst_i_19_n_0
+    SLICE_X103Y107       LUT6 (Prop_lut6_I0_O)        0.241    38.254 r  interMasterDisplay/display/CON_A_OBUF_inst_i_7/O
+                         net (fo=1, routed)           0.000    38.254    interMasterDisplay/display/CON_A_OBUF_inst_i_7_n_0
+    SLICE_X103Y107       MUXF7 (Prop_muxf7_I1_O)      0.182    38.436 r  interMasterDisplay/display/CON_A_OBUF_inst_i_2/O
+                         net (fo=8, routed)           2.029    40.465    interMasterDisplay/display/num_reg[2]_1
+    SLICE_X113Y74        LUT4 (Prop_lut4_I0_O)        0.273    40.738 r  interMasterDisplay/display/CON_G_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.597    42.335    CON_G_OBUF
+    U14                  OBUF (Prop_obuf_I_O)         3.560    45.895 r  CON_G_OBUF_inst/O
+                         net (fo=0)                   0.000    45.895    CON_G
+    U14                                                               r  CON_G (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dataNum1/value_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CON_F
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        45.881ns  (logic 14.501ns (31.605%)  route 31.380ns (68.395%))
+  Logic Levels:           55  (CARRY4=31 FDRE=1 LUT2=2 LUT3=5 LUT4=3 LUT5=3 LUT6=7 MUXF7=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y72         FDRE                         0.000     0.000 r  dataNum1/value_reg[0]/C
+    SLICE_X92Y72         FDRE (Prop_fdre_C_Q)         0.433     0.433 r  dataNum1/value_reg[0]/Q
+                         net (fo=90, routed)          4.807     5.240    instructor/value_reg[31]_11[0]
+    SLICE_X82Y92         LUT5 (Prop_lut5_I4_O)        0.105     5.345 r  instructor/CON_A_OBUF_inst_i_1364/O
+                         net (fo=127, routed)         1.610     6.955    instructor/value_reg[30]_2[0]
+    SLICE_X92Y90         LUT3 (Prop_lut3_I1_O)        0.105     7.060 r  instructor/CON_A_OBUF_inst_i_2041/O
+                         net (fo=9, routed)           1.548     8.607    interMasterDisplay/CON_A_OBUF_inst_i_3246_0[2]
+    SLICE_X61Y91         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.318     8.925 r  interMasterDisplay/CON_A_OBUF_inst_i_3606/CO[3]
+                         net (fo=1, routed)           0.000     8.925    interMasterDisplay/CON_A_OBUF_inst_i_3606_n_0
+    SLICE_X61Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.023 r  interMasterDisplay/CON_A_OBUF_inst_i_3859/CO[3]
+                         net (fo=1, routed)           0.000     9.023    interMasterDisplay/CON_A_OBUF_inst_i_3859_n_0
+    SLICE_X61Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.121 r  interMasterDisplay/CON_A_OBUF_inst_i_3780/CO[3]
+                         net (fo=1, routed)           0.000     9.121    interMasterDisplay/CON_A_OBUF_inst_i_3780_n_0
+    SLICE_X61Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.219 r  interMasterDisplay/CON_A_OBUF_inst_i_3605/CO[3]
+                         net (fo=1, routed)           0.000     9.219    interMasterDisplay/CON_A_OBUF_inst_i_3605_n_0
+    SLICE_X61Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.317 r  interMasterDisplay/CON_A_OBUF_inst_i_3253/CO[3]
+                         net (fo=1, routed)           0.000     9.317    interMasterDisplay/CON_A_OBUF_inst_i_3253_n_0
+    SLICE_X61Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.415 r  interMasterDisplay/CON_A_OBUF_inst_i_2736/CO[3]
+                         net (fo=1, routed)           0.000     9.415    interMasterDisplay/CON_A_OBUF_inst_i_2736_n_0
+    SLICE_X61Y97         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.200     9.615 r  interMasterDisplay/CON_A_OBUF_inst_i_2108/O[2]
+                         net (fo=2, routed)           0.902    10.517    interMasterDisplay/CON_A_OBUF_inst_i_2108_n_5
+    SLICE_X66Y97         LUT3 (Prop_lut3_I2_O)        0.253    10.770 r  interMasterDisplay/CON_A_OBUF_inst_i_1389/O
+                         net (fo=2, routed)           1.019    11.789    interMasterDisplay/CON_A_OBUF_inst_i_1389_n_0
+    SLICE_X62Y97         LUT4 (Prop_lut4_I3_O)        0.105    11.894 r  interMasterDisplay/CON_A_OBUF_inst_i_1393/O
+                         net (fo=1, routed)           0.000    11.894    interMasterDisplay/CON_A_OBUF_inst_i_1393_n_0
+    SLICE_X62Y97         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.316    12.210 r  interMasterDisplay/CON_A_OBUF_inst_i_768/CO[3]
+                         net (fo=1, routed)           0.000    12.210    interMasterDisplay/CON_A_OBUF_inst_i_768_n_0
+    SLICE_X62Y98         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    12.388 r  interMasterDisplay/CON_A_OBUF_inst_i_765/O[0]
+                         net (fo=2, routed)           0.555    12.943    interMasterDisplay/CON_A_OBUF_inst_i_765_n_7
+    SLICE_X58Y98         LUT3 (Prop_lut3_I0_O)        0.238    13.181 r  interMasterDisplay/CON_A_OBUF_inst_i_391/O
+                         net (fo=2, routed)           0.723    13.904    interMasterDisplay/CON_A_OBUF_inst_i_391_n_0
+    SLICE_X59Y98         LUT4 (Prop_lut4_I3_O)        0.105    14.009 r  interMasterDisplay/CON_A_OBUF_inst_i_395/O
+                         net (fo=1, routed)           0.000    14.009    interMasterDisplay/CON_A_OBUF_inst_i_395_n_0
+    SLICE_X59Y98         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.466 r  interMasterDisplay/CON_A_OBUF_inst_i_197/CO[3]
+                         net (fo=1, routed)           0.000    14.466    interMasterDisplay/CON_A_OBUF_inst_i_197_n_0
+    SLICE_X59Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    14.731 r  interMasterDisplay/CON_A_OBUF_inst_i_656/O[1]
+                         net (fo=20, routed)          1.320    16.051    interMasterDisplay/CON_A_OBUF_inst_i_656_n_6
+    SLICE_X81Y101        LUT2 (Prop_lut2_I0_O)        0.250    16.301 r  interMasterDisplay/CON_A_OBUF_inst_i_3632/O
+                         net (fo=1, routed)           0.000    16.301    interMasterDisplay/CON_A_OBUF_inst_i_3632_n_0
+    SLICE_X81Y101        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.440    16.741 r  interMasterDisplay/CON_A_OBUF_inst_i_3275/CO[3]
+                         net (fo=1, routed)           0.000    16.741    interMasterDisplay/CON_A_OBUF_inst_i_3275_n_0
+    SLICE_X81Y102        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    16.921 r  interMasterDisplay/CON_A_OBUF_inst_i_2802/O[0]
+                         net (fo=3, routed)           1.126    18.047    instructor/CON_A_OBUF_inst_i_2109[0]
+    SLICE_X91Y103        LUT6 (Prop_lut6_I0_O)        0.249    18.296 r  instructor/CON_A_OBUF_inst_i_3269/O
+                         net (fo=1, routed)           0.703    18.999    interMasterDisplay/CON_A_OBUF_inst_i_2109_0[1]
+    SLICE_X85Y103        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    19.417 r  interMasterDisplay/CON_A_OBUF_inst_i_2793/CO[3]
+                         net (fo=1, routed)           0.000    19.417    interMasterDisplay/CON_A_OBUF_inst_i_2793_n_0
+    SLICE_X85Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.515 r  interMasterDisplay/CON_A_OBUF_inst_i_2109/CO[3]
+                         net (fo=1, routed)           0.000    19.515    interMasterDisplay/CON_A_OBUF_inst_i_2109_n_0
+    SLICE_X85Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.613 r  interMasterDisplay/CON_A_OBUF_inst_i_1412/CO[3]
+                         net (fo=1, routed)           0.000    19.613    interMasterDisplay/CON_A_OBUF_inst_i_1412_n_0
+    SLICE_X85Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.711 r  interMasterDisplay/CON_A_OBUF_inst_i_771/CO[3]
+                         net (fo=1, routed)           0.000    19.711    interMasterDisplay/CON_A_OBUF_inst_i_771_n_0
+    SLICE_X85Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.809 r  interMasterDisplay/CON_A_OBUF_inst_i_397/CO[3]
+                         net (fo=1, routed)           0.000    19.809    interMasterDisplay/CON_A_OBUF_inst_i_397_n_0
+    SLICE_X85Y108        CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    19.941 r  interMasterDisplay/CON_A_OBUF_inst_i_198/CO[1]
+                         net (fo=44, routed)          1.999    21.940    interMasterDisplay/CON_A_OBUF_inst_i_198_n_2
+    SLICE_X83Y118        LUT3 (Prop_lut3_I0_O)        0.275    22.215 r  interMasterDisplay/CON_A_OBUF_inst_i_2209/O
+                         net (fo=152, routed)         2.502    24.717    interMasterDisplay/CON_A_OBUF_inst_i_2209_n_0
+    SLICE_X82Y110        LUT6 (Prop_lut6_I3_O)        0.105    24.822 r  interMasterDisplay/CON_A_OBUF_inst_i_2188/O
+                         net (fo=4, routed)           1.046    25.868    interMasterDisplay/CON_A_OBUF_inst_i_2188_n_0
+    SLICE_X86Y112        LUT6 (Prop_lut6_I0_O)        0.105    25.973 r  interMasterDisplay/CON_A_OBUF_inst_i_3662/O
+                         net (fo=1, routed)           0.000    25.973    interMasterDisplay/CON_A_OBUF_inst_i_3662_n_0
+    SLICE_X86Y112        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.444    26.417 r  interMasterDisplay/CON_A_OBUF_inst_i_3319/CO[3]
+                         net (fo=1, routed)           0.000    26.417    interMasterDisplay/CON_A_OBUF_inst_i_3319_n_0
+    SLICE_X86Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.517 r  interMasterDisplay/CON_A_OBUF_inst_i_2849/CO[3]
+                         net (fo=1, routed)           0.000    26.517    interMasterDisplay/CON_A_OBUF_inst_i_2849_n_0
+    SLICE_X86Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.617 r  interMasterDisplay/CON_A_OBUF_inst_i_2171/CO[3]
+                         net (fo=1, routed)           0.000    26.617    interMasterDisplay/CON_A_OBUF_inst_i_2171_n_0
+    SLICE_X86Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.717 r  interMasterDisplay/CON_A_OBUF_inst_i_1456/CO[3]
+                         net (fo=1, routed)           0.000    26.717    interMasterDisplay/CON_A_OBUF_inst_i_1456_n_0
+    SLICE_X86Y116        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    26.895 r  interMasterDisplay/CON_A_OBUF_inst_i_2210/O[0]
+                         net (fo=3, routed)           1.450    28.345    interMasterDisplay/CON_A_OBUF_inst_i_2210_n_7
+    SLICE_X80Y110        LUT6 (Prop_lut6_I0_O)        0.238    28.583 r  interMasterDisplay/CON_A_OBUF_inst_i_1470/O
+                         net (fo=1, routed)           0.264    28.847    interMasterDisplay/CON_A_OBUF_inst_i_1470_n_0
+    SLICE_X80Y112        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    29.265 r  interMasterDisplay/CON_A_OBUF_inst_i_809/CO[3]
+                         net (fo=1, routed)           0.000    29.265    interMasterDisplay/CON_A_OBUF_inst_i_809_n_0
+    SLICE_X80Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    29.445 r  interMasterDisplay/CON_A_OBUF_inst_i_821/O[0]
+                         net (fo=4, routed)           0.700    30.145    interMasterDisplay/CON_A_OBUF_inst_i_821_n_7
+    SLICE_X82Y117        LUT3 (Prop_lut3_I2_O)        0.249    30.394 r  interMasterDisplay/CON_A_OBUF_inst_i_813/O
+                         net (fo=1, routed)           0.784    31.178    interMasterDisplay/CON_A_OBUF_inst_i_813_n_0
+    SLICE_X80Y117        LUT5 (Prop_lut5_I4_O)        0.105    31.283 r  interMasterDisplay/CON_A_OBUF_inst_i_410/O
+                         net (fo=2, routed)           0.836    32.120    interMasterDisplay/CON_A_OBUF_inst_i_410_n_0
+    SLICE_X81Y115        LUT6 (Prop_lut6_I0_O)        0.105    32.225 r  interMasterDisplay/CON_A_OBUF_inst_i_414/O
+                         net (fo=1, routed)           0.000    32.225    interMasterDisplay/CON_A_OBUF_inst_i_414_n_0
+    SLICE_X81Y115        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    32.557 r  interMasterDisplay/CON_A_OBUF_inst_i_203/CO[3]
+                         net (fo=1, routed)           0.000    32.557    interMasterDisplay/CON_A_OBUF_inst_i_203_n_0
+    SLICE_X81Y116        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    32.822 r  interMasterDisplay/CON_A_OBUF_inst_i_406/O[1]
+                         net (fo=2, routed)           0.679    33.501    interMasterDisplay/CON_A_OBUF_inst_i_406_n_6
+    SLICE_X81Y118        LUT2 (Prop_lut2_I0_O)        0.250    33.751 r  interMasterDisplay/CON_A_OBUF_inst_i_408/O
+                         net (fo=1, routed)           0.000    33.751    interMasterDisplay/CON_A_OBUF_inst_i_408_n_0
+    SLICE_X81Y118        CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.187    33.938 r  interMasterDisplay/CON_A_OBUF_inst_i_202/O[1]
+                         net (fo=1, routed)           0.773    34.711    interMasterDisplay/CON_A_OBUF_inst_i_202_n_6
+    SLICE_X83Y110        LUT6 (Prop_lut6_I5_O)        0.250    34.961 r  interMasterDisplay/CON_A_OBUF_inst_i_90/O
+                         net (fo=1, routed)           0.000    34.961    interMasterDisplay/CON_A_OBUF_inst_i_90_n_0
+    SLICE_X83Y110        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    35.293 r  interMasterDisplay/CON_A_OBUF_inst_i_29/CO[3]
+                         net (fo=1, routed)           0.000    35.293    interMasterDisplay/CON_A_OBUF_inst_i_29_n_0
+    SLICE_X83Y111        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    35.473 r  interMasterDisplay/CON_A_OBUF_inst_i_172/O[0]
+                         net (fo=3, routed)           1.211    36.684    interMasterDisplay/CON_A_OBUF_inst_i_172_n_7
+    SLICE_X94Y107        LUT5 (Prop_lut5_I3_O)        0.249    36.933 r  interMasterDisplay/CON_A_OBUF_inst_i_66/O
+                         net (fo=1, routed)           0.000    36.933    interMasterDisplay/display/DS6[1]
+    SLICE_X94Y107        MUXF7 (Prop_muxf7_I0_O)      0.173    37.106 r  interMasterDisplay/display/CON_A_OBUF_inst_i_19/O
+                         net (fo=1, routed)           0.907    38.013    interMasterDisplay/display/CON_A_OBUF_inst_i_19_n_0
+    SLICE_X103Y107       LUT6 (Prop_lut6_I0_O)        0.241    38.254 r  interMasterDisplay/display/CON_A_OBUF_inst_i_7/O
+                         net (fo=1, routed)           0.000    38.254    interMasterDisplay/display/CON_A_OBUF_inst_i_7_n_0
+    SLICE_X103Y107       MUXF7 (Prop_muxf7_I1_O)      0.182    38.436 r  interMasterDisplay/display/CON_A_OBUF_inst_i_2/O
+                         net (fo=8, routed)           2.029    40.465    interMasterDisplay/display/num_reg[2]_1
+    SLICE_X113Y74        LUT4 (Prop_lut4_I0_O)        0.252    40.717 r  interMasterDisplay/display/CON_F_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.887    42.604    CON_F_OBUF
+    N17                  OBUF (Prop_obuf_I_O)         3.277    45.881 r  CON_F_OBUF_inst/O
+                         net (fo=0)                   0.000    45.881    CON_F
+    N17                                                               r  CON_F (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dataNum1/value_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CON_E
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        45.582ns  (logic 14.797ns (32.461%)  route 30.786ns (67.539%))
+  Logic Levels:           55  (CARRY4=31 FDRE=1 LUT2=2 LUT3=5 LUT4=3 LUT5=3 LUT6=7 MUXF7=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y72         FDRE                         0.000     0.000 r  dataNum1/value_reg[0]/C
+    SLICE_X92Y72         FDRE (Prop_fdre_C_Q)         0.433     0.433 r  dataNum1/value_reg[0]/Q
+                         net (fo=90, routed)          4.807     5.240    instructor/value_reg[31]_11[0]
+    SLICE_X82Y92         LUT5 (Prop_lut5_I4_O)        0.105     5.345 r  instructor/CON_A_OBUF_inst_i_1364/O
+                         net (fo=127, routed)         1.610     6.955    instructor/value_reg[30]_2[0]
+    SLICE_X92Y90         LUT3 (Prop_lut3_I1_O)        0.105     7.060 r  instructor/CON_A_OBUF_inst_i_2041/O
+                         net (fo=9, routed)           1.548     8.607    interMasterDisplay/CON_A_OBUF_inst_i_3246_0[2]
+    SLICE_X61Y91         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.318     8.925 r  interMasterDisplay/CON_A_OBUF_inst_i_3606/CO[3]
+                         net (fo=1, routed)           0.000     8.925    interMasterDisplay/CON_A_OBUF_inst_i_3606_n_0
+    SLICE_X61Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.023 r  interMasterDisplay/CON_A_OBUF_inst_i_3859/CO[3]
+                         net (fo=1, routed)           0.000     9.023    interMasterDisplay/CON_A_OBUF_inst_i_3859_n_0
+    SLICE_X61Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.121 r  interMasterDisplay/CON_A_OBUF_inst_i_3780/CO[3]
+                         net (fo=1, routed)           0.000     9.121    interMasterDisplay/CON_A_OBUF_inst_i_3780_n_0
+    SLICE_X61Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.219 r  interMasterDisplay/CON_A_OBUF_inst_i_3605/CO[3]
+                         net (fo=1, routed)           0.000     9.219    interMasterDisplay/CON_A_OBUF_inst_i_3605_n_0
+    SLICE_X61Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.317 r  interMasterDisplay/CON_A_OBUF_inst_i_3253/CO[3]
+                         net (fo=1, routed)           0.000     9.317    interMasterDisplay/CON_A_OBUF_inst_i_3253_n_0
+    SLICE_X61Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.415 r  interMasterDisplay/CON_A_OBUF_inst_i_2736/CO[3]
+                         net (fo=1, routed)           0.000     9.415    interMasterDisplay/CON_A_OBUF_inst_i_2736_n_0
+    SLICE_X61Y97         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.200     9.615 r  interMasterDisplay/CON_A_OBUF_inst_i_2108/O[2]
+                         net (fo=2, routed)           0.902    10.517    interMasterDisplay/CON_A_OBUF_inst_i_2108_n_5
+    SLICE_X66Y97         LUT3 (Prop_lut3_I2_O)        0.253    10.770 r  interMasterDisplay/CON_A_OBUF_inst_i_1389/O
+                         net (fo=2, routed)           1.019    11.789    interMasterDisplay/CON_A_OBUF_inst_i_1389_n_0
+    SLICE_X62Y97         LUT4 (Prop_lut4_I3_O)        0.105    11.894 r  interMasterDisplay/CON_A_OBUF_inst_i_1393/O
+                         net (fo=1, routed)           0.000    11.894    interMasterDisplay/CON_A_OBUF_inst_i_1393_n_0
+    SLICE_X62Y97         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.316    12.210 r  interMasterDisplay/CON_A_OBUF_inst_i_768/CO[3]
+                         net (fo=1, routed)           0.000    12.210    interMasterDisplay/CON_A_OBUF_inst_i_768_n_0
+    SLICE_X62Y98         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    12.388 r  interMasterDisplay/CON_A_OBUF_inst_i_765/O[0]
+                         net (fo=2, routed)           0.555    12.943    interMasterDisplay/CON_A_OBUF_inst_i_765_n_7
+    SLICE_X58Y98         LUT3 (Prop_lut3_I0_O)        0.238    13.181 r  interMasterDisplay/CON_A_OBUF_inst_i_391/O
+                         net (fo=2, routed)           0.723    13.904    interMasterDisplay/CON_A_OBUF_inst_i_391_n_0
+    SLICE_X59Y98         LUT4 (Prop_lut4_I3_O)        0.105    14.009 r  interMasterDisplay/CON_A_OBUF_inst_i_395/O
+                         net (fo=1, routed)           0.000    14.009    interMasterDisplay/CON_A_OBUF_inst_i_395_n_0
+    SLICE_X59Y98         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.466 r  interMasterDisplay/CON_A_OBUF_inst_i_197/CO[3]
+                         net (fo=1, routed)           0.000    14.466    interMasterDisplay/CON_A_OBUF_inst_i_197_n_0
+    SLICE_X59Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    14.731 r  interMasterDisplay/CON_A_OBUF_inst_i_656/O[1]
+                         net (fo=20, routed)          1.320    16.051    interMasterDisplay/CON_A_OBUF_inst_i_656_n_6
+    SLICE_X81Y101        LUT2 (Prop_lut2_I0_O)        0.250    16.301 r  interMasterDisplay/CON_A_OBUF_inst_i_3632/O
+                         net (fo=1, routed)           0.000    16.301    interMasterDisplay/CON_A_OBUF_inst_i_3632_n_0
+    SLICE_X81Y101        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.440    16.741 r  interMasterDisplay/CON_A_OBUF_inst_i_3275/CO[3]
+                         net (fo=1, routed)           0.000    16.741    interMasterDisplay/CON_A_OBUF_inst_i_3275_n_0
+    SLICE_X81Y102        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    16.921 r  interMasterDisplay/CON_A_OBUF_inst_i_2802/O[0]
+                         net (fo=3, routed)           1.126    18.047    instructor/CON_A_OBUF_inst_i_2109[0]
+    SLICE_X91Y103        LUT6 (Prop_lut6_I0_O)        0.249    18.296 r  instructor/CON_A_OBUF_inst_i_3269/O
+                         net (fo=1, routed)           0.703    18.999    interMasterDisplay/CON_A_OBUF_inst_i_2109_0[1]
+    SLICE_X85Y103        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    19.417 r  interMasterDisplay/CON_A_OBUF_inst_i_2793/CO[3]
+                         net (fo=1, routed)           0.000    19.417    interMasterDisplay/CON_A_OBUF_inst_i_2793_n_0
+    SLICE_X85Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.515 r  interMasterDisplay/CON_A_OBUF_inst_i_2109/CO[3]
+                         net (fo=1, routed)           0.000    19.515    interMasterDisplay/CON_A_OBUF_inst_i_2109_n_0
+    SLICE_X85Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.613 r  interMasterDisplay/CON_A_OBUF_inst_i_1412/CO[3]
+                         net (fo=1, routed)           0.000    19.613    interMasterDisplay/CON_A_OBUF_inst_i_1412_n_0
+    SLICE_X85Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.711 r  interMasterDisplay/CON_A_OBUF_inst_i_771/CO[3]
+                         net (fo=1, routed)           0.000    19.711    interMasterDisplay/CON_A_OBUF_inst_i_771_n_0
+    SLICE_X85Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.809 r  interMasterDisplay/CON_A_OBUF_inst_i_397/CO[3]
+                         net (fo=1, routed)           0.000    19.809    interMasterDisplay/CON_A_OBUF_inst_i_397_n_0
+    SLICE_X85Y108        CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    19.941 r  interMasterDisplay/CON_A_OBUF_inst_i_198/CO[1]
+                         net (fo=44, routed)          1.999    21.940    interMasterDisplay/CON_A_OBUF_inst_i_198_n_2
+    SLICE_X83Y118        LUT3 (Prop_lut3_I0_O)        0.275    22.215 r  interMasterDisplay/CON_A_OBUF_inst_i_2209/O
+                         net (fo=152, routed)         2.502    24.717    interMasterDisplay/CON_A_OBUF_inst_i_2209_n_0
+    SLICE_X82Y110        LUT6 (Prop_lut6_I3_O)        0.105    24.822 r  interMasterDisplay/CON_A_OBUF_inst_i_2188/O
+                         net (fo=4, routed)           1.046    25.868    interMasterDisplay/CON_A_OBUF_inst_i_2188_n_0
+    SLICE_X86Y112        LUT6 (Prop_lut6_I0_O)        0.105    25.973 r  interMasterDisplay/CON_A_OBUF_inst_i_3662/O
+                         net (fo=1, routed)           0.000    25.973    interMasterDisplay/CON_A_OBUF_inst_i_3662_n_0
+    SLICE_X86Y112        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.444    26.417 r  interMasterDisplay/CON_A_OBUF_inst_i_3319/CO[3]
+                         net (fo=1, routed)           0.000    26.417    interMasterDisplay/CON_A_OBUF_inst_i_3319_n_0
+    SLICE_X86Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.517 r  interMasterDisplay/CON_A_OBUF_inst_i_2849/CO[3]
+                         net (fo=1, routed)           0.000    26.517    interMasterDisplay/CON_A_OBUF_inst_i_2849_n_0
+    SLICE_X86Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.617 r  interMasterDisplay/CON_A_OBUF_inst_i_2171/CO[3]
+                         net (fo=1, routed)           0.000    26.617    interMasterDisplay/CON_A_OBUF_inst_i_2171_n_0
+    SLICE_X86Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.717 r  interMasterDisplay/CON_A_OBUF_inst_i_1456/CO[3]
+                         net (fo=1, routed)           0.000    26.717    interMasterDisplay/CON_A_OBUF_inst_i_1456_n_0
+    SLICE_X86Y116        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    26.895 r  interMasterDisplay/CON_A_OBUF_inst_i_2210/O[0]
+                         net (fo=3, routed)           1.450    28.345    interMasterDisplay/CON_A_OBUF_inst_i_2210_n_7
+    SLICE_X80Y110        LUT6 (Prop_lut6_I0_O)        0.238    28.583 r  interMasterDisplay/CON_A_OBUF_inst_i_1470/O
+                         net (fo=1, routed)           0.264    28.847    interMasterDisplay/CON_A_OBUF_inst_i_1470_n_0
+    SLICE_X80Y112        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    29.265 r  interMasterDisplay/CON_A_OBUF_inst_i_809/CO[3]
+                         net (fo=1, routed)           0.000    29.265    interMasterDisplay/CON_A_OBUF_inst_i_809_n_0
+    SLICE_X80Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    29.445 r  interMasterDisplay/CON_A_OBUF_inst_i_821/O[0]
+                         net (fo=4, routed)           0.700    30.145    interMasterDisplay/CON_A_OBUF_inst_i_821_n_7
+    SLICE_X82Y117        LUT3 (Prop_lut3_I2_O)        0.249    30.394 r  interMasterDisplay/CON_A_OBUF_inst_i_813/O
+                         net (fo=1, routed)           0.784    31.178    interMasterDisplay/CON_A_OBUF_inst_i_813_n_0
+    SLICE_X80Y117        LUT5 (Prop_lut5_I4_O)        0.105    31.283 r  interMasterDisplay/CON_A_OBUF_inst_i_410/O
+                         net (fo=2, routed)           0.836    32.120    interMasterDisplay/CON_A_OBUF_inst_i_410_n_0
+    SLICE_X81Y115        LUT6 (Prop_lut6_I0_O)        0.105    32.225 r  interMasterDisplay/CON_A_OBUF_inst_i_414/O
+                         net (fo=1, routed)           0.000    32.225    interMasterDisplay/CON_A_OBUF_inst_i_414_n_0
+    SLICE_X81Y115        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    32.557 r  interMasterDisplay/CON_A_OBUF_inst_i_203/CO[3]
+                         net (fo=1, routed)           0.000    32.557    interMasterDisplay/CON_A_OBUF_inst_i_203_n_0
+    SLICE_X81Y116        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    32.822 r  interMasterDisplay/CON_A_OBUF_inst_i_406/O[1]
+                         net (fo=2, routed)           0.679    33.501    interMasterDisplay/CON_A_OBUF_inst_i_406_n_6
+    SLICE_X81Y118        LUT2 (Prop_lut2_I0_O)        0.250    33.751 r  interMasterDisplay/CON_A_OBUF_inst_i_408/O
+                         net (fo=1, routed)           0.000    33.751    interMasterDisplay/CON_A_OBUF_inst_i_408_n_0
+    SLICE_X81Y118        CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.187    33.938 r  interMasterDisplay/CON_A_OBUF_inst_i_202/O[1]
+                         net (fo=1, routed)           0.773    34.711    interMasterDisplay/CON_A_OBUF_inst_i_202_n_6
+    SLICE_X83Y110        LUT6 (Prop_lut6_I5_O)        0.250    34.961 r  interMasterDisplay/CON_A_OBUF_inst_i_90/O
+                         net (fo=1, routed)           0.000    34.961    interMasterDisplay/CON_A_OBUF_inst_i_90_n_0
+    SLICE_X83Y110        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    35.293 r  interMasterDisplay/CON_A_OBUF_inst_i_29/CO[3]
+                         net (fo=1, routed)           0.000    35.293    interMasterDisplay/CON_A_OBUF_inst_i_29_n_0
+    SLICE_X83Y111        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    35.473 r  interMasterDisplay/CON_A_OBUF_inst_i_172/O[0]
+                         net (fo=3, routed)           1.211    36.684    interMasterDisplay/CON_A_OBUF_inst_i_172_n_7
+    SLICE_X94Y107        LUT5 (Prop_lut5_I3_O)        0.249    36.933 r  interMasterDisplay/CON_A_OBUF_inst_i_66/O
+                         net (fo=1, routed)           0.000    36.933    interMasterDisplay/display/DS6[1]
+    SLICE_X94Y107        MUXF7 (Prop_muxf7_I0_O)      0.173    37.106 r  interMasterDisplay/display/CON_A_OBUF_inst_i_19/O
+                         net (fo=1, routed)           0.907    38.013    interMasterDisplay/display/CON_A_OBUF_inst_i_19_n_0
+    SLICE_X103Y107       LUT6 (Prop_lut6_I0_O)        0.241    38.254 r  interMasterDisplay/display/CON_A_OBUF_inst_i_7/O
+                         net (fo=1, routed)           0.000    38.254    interMasterDisplay/display/CON_A_OBUF_inst_i_7_n_0
+    SLICE_X103Y107       MUXF7 (Prop_muxf7_I1_O)      0.182    38.436 r  interMasterDisplay/display/CON_A_OBUF_inst_i_2/O
+                         net (fo=8, routed)           1.952    40.387    interMasterDisplay/display/num_reg[2]_1
+    SLICE_X113Y84        LUT4 (Prop_lut4_I0_O)        0.262    40.649 r  interMasterDisplay/display/CON_E_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.370    42.020    CON_E_OBUF
+    W14                  OBUF (Prop_obuf_I_O)         3.563    45.582 r  CON_E_OBUF_inst/O
+                         net (fo=0)                   0.000    45.582    CON_E
+    W14                                                               r  CON_E (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dataNum1/value_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CON_C
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        45.511ns  (logic 14.594ns (32.066%)  route 30.917ns (67.934%))
+  Logic Levels:           55  (CARRY4=31 FDRE=1 LUT2=2 LUT3=5 LUT4=3 LUT5=3 LUT6=7 MUXF7=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y72         FDRE                         0.000     0.000 r  dataNum1/value_reg[0]/C
+    SLICE_X92Y72         FDRE (Prop_fdre_C_Q)         0.433     0.433 r  dataNum1/value_reg[0]/Q
+                         net (fo=90, routed)          4.807     5.240    instructor/value_reg[31]_11[0]
+    SLICE_X82Y92         LUT5 (Prop_lut5_I4_O)        0.105     5.345 r  instructor/CON_A_OBUF_inst_i_1364/O
+                         net (fo=127, routed)         1.610     6.955    instructor/value_reg[30]_2[0]
+    SLICE_X92Y90         LUT3 (Prop_lut3_I1_O)        0.105     7.060 r  instructor/CON_A_OBUF_inst_i_2041/O
+                         net (fo=9, routed)           1.548     8.607    interMasterDisplay/CON_A_OBUF_inst_i_3246_0[2]
+    SLICE_X61Y91         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.318     8.925 r  interMasterDisplay/CON_A_OBUF_inst_i_3606/CO[3]
+                         net (fo=1, routed)           0.000     8.925    interMasterDisplay/CON_A_OBUF_inst_i_3606_n_0
+    SLICE_X61Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.023 r  interMasterDisplay/CON_A_OBUF_inst_i_3859/CO[3]
+                         net (fo=1, routed)           0.000     9.023    interMasterDisplay/CON_A_OBUF_inst_i_3859_n_0
+    SLICE_X61Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.121 r  interMasterDisplay/CON_A_OBUF_inst_i_3780/CO[3]
+                         net (fo=1, routed)           0.000     9.121    interMasterDisplay/CON_A_OBUF_inst_i_3780_n_0
+    SLICE_X61Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.219 r  interMasterDisplay/CON_A_OBUF_inst_i_3605/CO[3]
+                         net (fo=1, routed)           0.000     9.219    interMasterDisplay/CON_A_OBUF_inst_i_3605_n_0
+    SLICE_X61Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.317 r  interMasterDisplay/CON_A_OBUF_inst_i_3253/CO[3]
+                         net (fo=1, routed)           0.000     9.317    interMasterDisplay/CON_A_OBUF_inst_i_3253_n_0
+    SLICE_X61Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.415 r  interMasterDisplay/CON_A_OBUF_inst_i_2736/CO[3]
+                         net (fo=1, routed)           0.000     9.415    interMasterDisplay/CON_A_OBUF_inst_i_2736_n_0
+    SLICE_X61Y97         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.200     9.615 r  interMasterDisplay/CON_A_OBUF_inst_i_2108/O[2]
+                         net (fo=2, routed)           0.902    10.517    interMasterDisplay/CON_A_OBUF_inst_i_2108_n_5
+    SLICE_X66Y97         LUT3 (Prop_lut3_I2_O)        0.253    10.770 r  interMasterDisplay/CON_A_OBUF_inst_i_1389/O
+                         net (fo=2, routed)           1.019    11.789    interMasterDisplay/CON_A_OBUF_inst_i_1389_n_0
+    SLICE_X62Y97         LUT4 (Prop_lut4_I3_O)        0.105    11.894 r  interMasterDisplay/CON_A_OBUF_inst_i_1393/O
+                         net (fo=1, routed)           0.000    11.894    interMasterDisplay/CON_A_OBUF_inst_i_1393_n_0
+    SLICE_X62Y97         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.316    12.210 r  interMasterDisplay/CON_A_OBUF_inst_i_768/CO[3]
+                         net (fo=1, routed)           0.000    12.210    interMasterDisplay/CON_A_OBUF_inst_i_768_n_0
+    SLICE_X62Y98         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    12.388 r  interMasterDisplay/CON_A_OBUF_inst_i_765/O[0]
+                         net (fo=2, routed)           0.555    12.943    interMasterDisplay/CON_A_OBUF_inst_i_765_n_7
+    SLICE_X58Y98         LUT3 (Prop_lut3_I0_O)        0.238    13.181 r  interMasterDisplay/CON_A_OBUF_inst_i_391/O
+                         net (fo=2, routed)           0.723    13.904    interMasterDisplay/CON_A_OBUF_inst_i_391_n_0
+    SLICE_X59Y98         LUT4 (Prop_lut4_I3_O)        0.105    14.009 r  interMasterDisplay/CON_A_OBUF_inst_i_395/O
+                         net (fo=1, routed)           0.000    14.009    interMasterDisplay/CON_A_OBUF_inst_i_395_n_0
+    SLICE_X59Y98         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.466 r  interMasterDisplay/CON_A_OBUF_inst_i_197/CO[3]
+                         net (fo=1, routed)           0.000    14.466    interMasterDisplay/CON_A_OBUF_inst_i_197_n_0
+    SLICE_X59Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    14.731 r  interMasterDisplay/CON_A_OBUF_inst_i_656/O[1]
+                         net (fo=20, routed)          1.320    16.051    interMasterDisplay/CON_A_OBUF_inst_i_656_n_6
+    SLICE_X81Y101        LUT2 (Prop_lut2_I0_O)        0.250    16.301 r  interMasterDisplay/CON_A_OBUF_inst_i_3632/O
+                         net (fo=1, routed)           0.000    16.301    interMasterDisplay/CON_A_OBUF_inst_i_3632_n_0
+    SLICE_X81Y101        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.440    16.741 r  interMasterDisplay/CON_A_OBUF_inst_i_3275/CO[3]
+                         net (fo=1, routed)           0.000    16.741    interMasterDisplay/CON_A_OBUF_inst_i_3275_n_0
+    SLICE_X81Y102        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    16.921 r  interMasterDisplay/CON_A_OBUF_inst_i_2802/O[0]
+                         net (fo=3, routed)           1.126    18.047    instructor/CON_A_OBUF_inst_i_2109[0]
+    SLICE_X91Y103        LUT6 (Prop_lut6_I0_O)        0.249    18.296 r  instructor/CON_A_OBUF_inst_i_3269/O
+                         net (fo=1, routed)           0.703    18.999    interMasterDisplay/CON_A_OBUF_inst_i_2109_0[1]
+    SLICE_X85Y103        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    19.417 r  interMasterDisplay/CON_A_OBUF_inst_i_2793/CO[3]
+                         net (fo=1, routed)           0.000    19.417    interMasterDisplay/CON_A_OBUF_inst_i_2793_n_0
+    SLICE_X85Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.515 r  interMasterDisplay/CON_A_OBUF_inst_i_2109/CO[3]
+                         net (fo=1, routed)           0.000    19.515    interMasterDisplay/CON_A_OBUF_inst_i_2109_n_0
+    SLICE_X85Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.613 r  interMasterDisplay/CON_A_OBUF_inst_i_1412/CO[3]
+                         net (fo=1, routed)           0.000    19.613    interMasterDisplay/CON_A_OBUF_inst_i_1412_n_0
+    SLICE_X85Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.711 r  interMasterDisplay/CON_A_OBUF_inst_i_771/CO[3]
+                         net (fo=1, routed)           0.000    19.711    interMasterDisplay/CON_A_OBUF_inst_i_771_n_0
+    SLICE_X85Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.809 r  interMasterDisplay/CON_A_OBUF_inst_i_397/CO[3]
+                         net (fo=1, routed)           0.000    19.809    interMasterDisplay/CON_A_OBUF_inst_i_397_n_0
+    SLICE_X85Y108        CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    19.941 r  interMasterDisplay/CON_A_OBUF_inst_i_198/CO[1]
+                         net (fo=44, routed)          1.999    21.940    interMasterDisplay/CON_A_OBUF_inst_i_198_n_2
+    SLICE_X83Y118        LUT3 (Prop_lut3_I0_O)        0.275    22.215 r  interMasterDisplay/CON_A_OBUF_inst_i_2209/O
+                         net (fo=152, routed)         2.502    24.717    interMasterDisplay/CON_A_OBUF_inst_i_2209_n_0
+    SLICE_X82Y110        LUT6 (Prop_lut6_I3_O)        0.105    24.822 r  interMasterDisplay/CON_A_OBUF_inst_i_2188/O
+                         net (fo=4, routed)           1.046    25.868    interMasterDisplay/CON_A_OBUF_inst_i_2188_n_0
+    SLICE_X86Y112        LUT6 (Prop_lut6_I0_O)        0.105    25.973 r  interMasterDisplay/CON_A_OBUF_inst_i_3662/O
+                         net (fo=1, routed)           0.000    25.973    interMasterDisplay/CON_A_OBUF_inst_i_3662_n_0
+    SLICE_X86Y112        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.444    26.417 r  interMasterDisplay/CON_A_OBUF_inst_i_3319/CO[3]
+                         net (fo=1, routed)           0.000    26.417    interMasterDisplay/CON_A_OBUF_inst_i_3319_n_0
+    SLICE_X86Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.517 r  interMasterDisplay/CON_A_OBUF_inst_i_2849/CO[3]
+                         net (fo=1, routed)           0.000    26.517    interMasterDisplay/CON_A_OBUF_inst_i_2849_n_0
+    SLICE_X86Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.617 r  interMasterDisplay/CON_A_OBUF_inst_i_2171/CO[3]
+                         net (fo=1, routed)           0.000    26.617    interMasterDisplay/CON_A_OBUF_inst_i_2171_n_0
+    SLICE_X86Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.717 r  interMasterDisplay/CON_A_OBUF_inst_i_1456/CO[3]
+                         net (fo=1, routed)           0.000    26.717    interMasterDisplay/CON_A_OBUF_inst_i_1456_n_0
+    SLICE_X86Y116        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    26.895 r  interMasterDisplay/CON_A_OBUF_inst_i_2210/O[0]
+                         net (fo=3, routed)           1.450    28.345    interMasterDisplay/CON_A_OBUF_inst_i_2210_n_7
+    SLICE_X80Y110        LUT6 (Prop_lut6_I0_O)        0.238    28.583 r  interMasterDisplay/CON_A_OBUF_inst_i_1470/O
+                         net (fo=1, routed)           0.264    28.847    interMasterDisplay/CON_A_OBUF_inst_i_1470_n_0
+    SLICE_X80Y112        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    29.265 r  interMasterDisplay/CON_A_OBUF_inst_i_809/CO[3]
+                         net (fo=1, routed)           0.000    29.265    interMasterDisplay/CON_A_OBUF_inst_i_809_n_0
+    SLICE_X80Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    29.445 r  interMasterDisplay/CON_A_OBUF_inst_i_821/O[0]
+                         net (fo=4, routed)           0.700    30.145    interMasterDisplay/CON_A_OBUF_inst_i_821_n_7
+    SLICE_X82Y117        LUT3 (Prop_lut3_I2_O)        0.249    30.394 r  interMasterDisplay/CON_A_OBUF_inst_i_813/O
+                         net (fo=1, routed)           0.784    31.178    interMasterDisplay/CON_A_OBUF_inst_i_813_n_0
+    SLICE_X80Y117        LUT5 (Prop_lut5_I4_O)        0.105    31.283 r  interMasterDisplay/CON_A_OBUF_inst_i_410/O
+                         net (fo=2, routed)           0.836    32.120    interMasterDisplay/CON_A_OBUF_inst_i_410_n_0
+    SLICE_X81Y115        LUT6 (Prop_lut6_I0_O)        0.105    32.225 r  interMasterDisplay/CON_A_OBUF_inst_i_414/O
+                         net (fo=1, routed)           0.000    32.225    interMasterDisplay/CON_A_OBUF_inst_i_414_n_0
+    SLICE_X81Y115        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    32.557 r  interMasterDisplay/CON_A_OBUF_inst_i_203/CO[3]
+                         net (fo=1, routed)           0.000    32.557    interMasterDisplay/CON_A_OBUF_inst_i_203_n_0
+    SLICE_X81Y116        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    32.822 r  interMasterDisplay/CON_A_OBUF_inst_i_406/O[1]
+                         net (fo=2, routed)           0.679    33.501    interMasterDisplay/CON_A_OBUF_inst_i_406_n_6
+    SLICE_X81Y118        LUT2 (Prop_lut2_I0_O)        0.250    33.751 r  interMasterDisplay/CON_A_OBUF_inst_i_408/O
+                         net (fo=1, routed)           0.000    33.751    interMasterDisplay/CON_A_OBUF_inst_i_408_n_0
+    SLICE_X81Y118        CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.187    33.938 r  interMasterDisplay/CON_A_OBUF_inst_i_202/O[1]
+                         net (fo=1, routed)           0.773    34.711    interMasterDisplay/CON_A_OBUF_inst_i_202_n_6
+    SLICE_X83Y110        LUT6 (Prop_lut6_I5_O)        0.250    34.961 r  interMasterDisplay/CON_A_OBUF_inst_i_90/O
+                         net (fo=1, routed)           0.000    34.961    interMasterDisplay/CON_A_OBUF_inst_i_90_n_0
+    SLICE_X83Y110        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    35.293 r  interMasterDisplay/CON_A_OBUF_inst_i_29/CO[3]
+                         net (fo=1, routed)           0.000    35.293    interMasterDisplay/CON_A_OBUF_inst_i_29_n_0
+    SLICE_X83Y111        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    35.473 r  interMasterDisplay/CON_A_OBUF_inst_i_172/O[0]
+                         net (fo=3, routed)           1.211    36.684    interMasterDisplay/CON_A_OBUF_inst_i_172_n_7
+    SLICE_X94Y107        LUT5 (Prop_lut5_I3_O)        0.249    36.933 r  interMasterDisplay/CON_A_OBUF_inst_i_66/O
+                         net (fo=1, routed)           0.000    36.933    interMasterDisplay/display/DS6[1]
+    SLICE_X94Y107        MUXF7 (Prop_muxf7_I0_O)      0.173    37.106 r  interMasterDisplay/display/CON_A_OBUF_inst_i_19/O
+                         net (fo=1, routed)           0.907    38.013    interMasterDisplay/display/CON_A_OBUF_inst_i_19_n_0
+    SLICE_X103Y107       LUT6 (Prop_lut6_I0_O)        0.241    38.254 r  interMasterDisplay/display/CON_A_OBUF_inst_i_7/O
+                         net (fo=1, routed)           0.000    38.254    interMasterDisplay/display/CON_A_OBUF_inst_i_7_n_0
+    SLICE_X103Y107       MUXF7 (Prop_muxf7_I1_O)      0.182    38.436 r  interMasterDisplay/display/CON_A_OBUF_inst_i_2/O
+                         net (fo=8, routed)           1.952    40.387    interMasterDisplay/display/num_reg[2]_1
+    SLICE_X113Y84        LUT4 (Prop_lut4_I0_O)        0.252    40.639 r  interMasterDisplay/display/CON_C_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.502    42.141    CON_C_OBUF
+    Y16                  OBUF (Prop_obuf_I_O)         3.370    45.511 r  CON_C_OBUF_inst/O
+                         net (fo=0)                   0.000    45.511    CON_C
+    Y16                                                               r  CON_C (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dataNum1/value_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            CON_B
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        44.789ns  (logic 14.527ns (32.434%)  route 30.262ns (67.566%))
+  Logic Levels:           55  (CARRY4=31 FDRE=1 LUT2=2 LUT3=5 LUT4=3 LUT5=3 LUT6=7 MUXF7=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y72         FDRE                         0.000     0.000 r  dataNum1/value_reg[0]/C
+    SLICE_X92Y72         FDRE (Prop_fdre_C_Q)         0.433     0.433 r  dataNum1/value_reg[0]/Q
+                         net (fo=90, routed)          4.807     5.240    instructor/value_reg[31]_11[0]
+    SLICE_X82Y92         LUT5 (Prop_lut5_I4_O)        0.105     5.345 r  instructor/CON_A_OBUF_inst_i_1364/O
+                         net (fo=127, routed)         1.610     6.955    instructor/value_reg[30]_2[0]
+    SLICE_X92Y90         LUT3 (Prop_lut3_I1_O)        0.105     7.060 r  instructor/CON_A_OBUF_inst_i_2041/O
+                         net (fo=9, routed)           1.548     8.607    interMasterDisplay/CON_A_OBUF_inst_i_3246_0[2]
+    SLICE_X61Y91         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.318     8.925 r  interMasterDisplay/CON_A_OBUF_inst_i_3606/CO[3]
+                         net (fo=1, routed)           0.000     8.925    interMasterDisplay/CON_A_OBUF_inst_i_3606_n_0
+    SLICE_X61Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.023 r  interMasterDisplay/CON_A_OBUF_inst_i_3859/CO[3]
+                         net (fo=1, routed)           0.000     9.023    interMasterDisplay/CON_A_OBUF_inst_i_3859_n_0
+    SLICE_X61Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.121 r  interMasterDisplay/CON_A_OBUF_inst_i_3780/CO[3]
+                         net (fo=1, routed)           0.000     9.121    interMasterDisplay/CON_A_OBUF_inst_i_3780_n_0
+    SLICE_X61Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.219 r  interMasterDisplay/CON_A_OBUF_inst_i_3605/CO[3]
+                         net (fo=1, routed)           0.000     9.219    interMasterDisplay/CON_A_OBUF_inst_i_3605_n_0
+    SLICE_X61Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.317 r  interMasterDisplay/CON_A_OBUF_inst_i_3253/CO[3]
+                         net (fo=1, routed)           0.000     9.317    interMasterDisplay/CON_A_OBUF_inst_i_3253_n_0
+    SLICE_X61Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098     9.415 r  interMasterDisplay/CON_A_OBUF_inst_i_2736/CO[3]
+                         net (fo=1, routed)           0.000     9.415    interMasterDisplay/CON_A_OBUF_inst_i_2736_n_0
+    SLICE_X61Y97         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.200     9.615 r  interMasterDisplay/CON_A_OBUF_inst_i_2108/O[2]
+                         net (fo=2, routed)           0.902    10.517    interMasterDisplay/CON_A_OBUF_inst_i_2108_n_5
+    SLICE_X66Y97         LUT3 (Prop_lut3_I2_O)        0.253    10.770 r  interMasterDisplay/CON_A_OBUF_inst_i_1389/O
+                         net (fo=2, routed)           1.019    11.789    interMasterDisplay/CON_A_OBUF_inst_i_1389_n_0
+    SLICE_X62Y97         LUT4 (Prop_lut4_I3_O)        0.105    11.894 r  interMasterDisplay/CON_A_OBUF_inst_i_1393/O
+                         net (fo=1, routed)           0.000    11.894    interMasterDisplay/CON_A_OBUF_inst_i_1393_n_0
+    SLICE_X62Y97         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.316    12.210 r  interMasterDisplay/CON_A_OBUF_inst_i_768/CO[3]
+                         net (fo=1, routed)           0.000    12.210    interMasterDisplay/CON_A_OBUF_inst_i_768_n_0
+    SLICE_X62Y98         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    12.388 r  interMasterDisplay/CON_A_OBUF_inst_i_765/O[0]
+                         net (fo=2, routed)           0.555    12.943    interMasterDisplay/CON_A_OBUF_inst_i_765_n_7
+    SLICE_X58Y98         LUT3 (Prop_lut3_I0_O)        0.238    13.181 r  interMasterDisplay/CON_A_OBUF_inst_i_391/O
+                         net (fo=2, routed)           0.723    13.904    interMasterDisplay/CON_A_OBUF_inst_i_391_n_0
+    SLICE_X59Y98         LUT4 (Prop_lut4_I3_O)        0.105    14.009 r  interMasterDisplay/CON_A_OBUF_inst_i_395/O
+                         net (fo=1, routed)           0.000    14.009    interMasterDisplay/CON_A_OBUF_inst_i_395_n_0
+    SLICE_X59Y98         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.466 r  interMasterDisplay/CON_A_OBUF_inst_i_197/CO[3]
+                         net (fo=1, routed)           0.000    14.466    interMasterDisplay/CON_A_OBUF_inst_i_197_n_0
+    SLICE_X59Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    14.731 r  interMasterDisplay/CON_A_OBUF_inst_i_656/O[1]
+                         net (fo=20, routed)          1.320    16.051    interMasterDisplay/CON_A_OBUF_inst_i_656_n_6
+    SLICE_X81Y101        LUT2 (Prop_lut2_I0_O)        0.250    16.301 r  interMasterDisplay/CON_A_OBUF_inst_i_3632/O
+                         net (fo=1, routed)           0.000    16.301    interMasterDisplay/CON_A_OBUF_inst_i_3632_n_0
+    SLICE_X81Y101        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.440    16.741 r  interMasterDisplay/CON_A_OBUF_inst_i_3275/CO[3]
+                         net (fo=1, routed)           0.000    16.741    interMasterDisplay/CON_A_OBUF_inst_i_3275_n_0
+    SLICE_X81Y102        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    16.921 r  interMasterDisplay/CON_A_OBUF_inst_i_2802/O[0]
+                         net (fo=3, routed)           1.126    18.047    instructor/CON_A_OBUF_inst_i_2109[0]
+    SLICE_X91Y103        LUT6 (Prop_lut6_I0_O)        0.249    18.296 r  instructor/CON_A_OBUF_inst_i_3269/O
+                         net (fo=1, routed)           0.703    18.999    interMasterDisplay/CON_A_OBUF_inst_i_2109_0[1]
+    SLICE_X85Y103        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    19.417 r  interMasterDisplay/CON_A_OBUF_inst_i_2793/CO[3]
+                         net (fo=1, routed)           0.000    19.417    interMasterDisplay/CON_A_OBUF_inst_i_2793_n_0
+    SLICE_X85Y104        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.515 r  interMasterDisplay/CON_A_OBUF_inst_i_2109/CO[3]
+                         net (fo=1, routed)           0.000    19.515    interMasterDisplay/CON_A_OBUF_inst_i_2109_n_0
+    SLICE_X85Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.613 r  interMasterDisplay/CON_A_OBUF_inst_i_1412/CO[3]
+                         net (fo=1, routed)           0.000    19.613    interMasterDisplay/CON_A_OBUF_inst_i_1412_n_0
+    SLICE_X85Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.711 r  interMasterDisplay/CON_A_OBUF_inst_i_771/CO[3]
+                         net (fo=1, routed)           0.000    19.711    interMasterDisplay/CON_A_OBUF_inst_i_771_n_0
+    SLICE_X85Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.809 r  interMasterDisplay/CON_A_OBUF_inst_i_397/CO[3]
+                         net (fo=1, routed)           0.000    19.809    interMasterDisplay/CON_A_OBUF_inst_i_397_n_0
+    SLICE_X85Y108        CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    19.941 r  interMasterDisplay/CON_A_OBUF_inst_i_198/CO[1]
+                         net (fo=44, routed)          1.999    21.940    interMasterDisplay/CON_A_OBUF_inst_i_198_n_2
+    SLICE_X83Y118        LUT3 (Prop_lut3_I0_O)        0.275    22.215 r  interMasterDisplay/CON_A_OBUF_inst_i_2209/O
+                         net (fo=152, routed)         2.502    24.717    interMasterDisplay/CON_A_OBUF_inst_i_2209_n_0
+    SLICE_X82Y110        LUT6 (Prop_lut6_I3_O)        0.105    24.822 r  interMasterDisplay/CON_A_OBUF_inst_i_2188/O
+                         net (fo=4, routed)           1.046    25.868    interMasterDisplay/CON_A_OBUF_inst_i_2188_n_0
+    SLICE_X86Y112        LUT6 (Prop_lut6_I0_O)        0.105    25.973 r  interMasterDisplay/CON_A_OBUF_inst_i_3662/O
+                         net (fo=1, routed)           0.000    25.973    interMasterDisplay/CON_A_OBUF_inst_i_3662_n_0
+    SLICE_X86Y112        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.444    26.417 r  interMasterDisplay/CON_A_OBUF_inst_i_3319/CO[3]
+                         net (fo=1, routed)           0.000    26.417    interMasterDisplay/CON_A_OBUF_inst_i_3319_n_0
+    SLICE_X86Y113        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.517 r  interMasterDisplay/CON_A_OBUF_inst_i_2849/CO[3]
+                         net (fo=1, routed)           0.000    26.517    interMasterDisplay/CON_A_OBUF_inst_i_2849_n_0
+    SLICE_X86Y114        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.617 r  interMasterDisplay/CON_A_OBUF_inst_i_2171/CO[3]
+                         net (fo=1, routed)           0.000    26.617    interMasterDisplay/CON_A_OBUF_inst_i_2171_n_0
+    SLICE_X86Y115        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    26.717 r  interMasterDisplay/CON_A_OBUF_inst_i_1456/CO[3]
+                         net (fo=1, routed)           0.000    26.717    interMasterDisplay/CON_A_OBUF_inst_i_1456_n_0
+    SLICE_X86Y116        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178    26.895 r  interMasterDisplay/CON_A_OBUF_inst_i_2210/O[0]
+                         net (fo=3, routed)           1.450    28.345    interMasterDisplay/CON_A_OBUF_inst_i_2210_n_7
+    SLICE_X80Y110        LUT6 (Prop_lut6_I0_O)        0.238    28.583 r  interMasterDisplay/CON_A_OBUF_inst_i_1470/O
+                         net (fo=1, routed)           0.264    28.847    interMasterDisplay/CON_A_OBUF_inst_i_1470_n_0
+    SLICE_X80Y112        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.418    29.265 r  interMasterDisplay/CON_A_OBUF_inst_i_809/CO[3]
+                         net (fo=1, routed)           0.000    29.265    interMasterDisplay/CON_A_OBUF_inst_i_809_n_0
+    SLICE_X80Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    29.445 r  interMasterDisplay/CON_A_OBUF_inst_i_821/O[0]
+                         net (fo=4, routed)           0.700    30.145    interMasterDisplay/CON_A_OBUF_inst_i_821_n_7
+    SLICE_X82Y117        LUT3 (Prop_lut3_I2_O)        0.249    30.394 r  interMasterDisplay/CON_A_OBUF_inst_i_813/O
+                         net (fo=1, routed)           0.784    31.178    interMasterDisplay/CON_A_OBUF_inst_i_813_n_0
+    SLICE_X80Y117        LUT5 (Prop_lut5_I4_O)        0.105    31.283 r  interMasterDisplay/CON_A_OBUF_inst_i_410/O
+                         net (fo=2, routed)           0.836    32.120    interMasterDisplay/CON_A_OBUF_inst_i_410_n_0
+    SLICE_X81Y115        LUT6 (Prop_lut6_I0_O)        0.105    32.225 r  interMasterDisplay/CON_A_OBUF_inst_i_414/O
+                         net (fo=1, routed)           0.000    32.225    interMasterDisplay/CON_A_OBUF_inst_i_414_n_0
+    SLICE_X81Y115        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    32.557 r  interMasterDisplay/CON_A_OBUF_inst_i_203/CO[3]
+                         net (fo=1, routed)           0.000    32.557    interMasterDisplay/CON_A_OBUF_inst_i_203_n_0
+    SLICE_X81Y116        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265    32.822 r  interMasterDisplay/CON_A_OBUF_inst_i_406/O[1]
+                         net (fo=2, routed)           0.679    33.501    interMasterDisplay/CON_A_OBUF_inst_i_406_n_6
+    SLICE_X81Y118        LUT2 (Prop_lut2_I0_O)        0.250    33.751 r  interMasterDisplay/CON_A_OBUF_inst_i_408/O
+                         net (fo=1, routed)           0.000    33.751    interMasterDisplay/CON_A_OBUF_inst_i_408_n_0
+    SLICE_X81Y118        CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.187    33.938 r  interMasterDisplay/CON_A_OBUF_inst_i_202/O[1]
+                         net (fo=1, routed)           0.773    34.711    interMasterDisplay/CON_A_OBUF_inst_i_202_n_6
+    SLICE_X83Y110        LUT6 (Prop_lut6_I5_O)        0.250    34.961 r  interMasterDisplay/CON_A_OBUF_inst_i_90/O
+                         net (fo=1, routed)           0.000    34.961    interMasterDisplay/CON_A_OBUF_inst_i_90_n_0
+    SLICE_X83Y110        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    35.293 r  interMasterDisplay/CON_A_OBUF_inst_i_29/CO[3]
+                         net (fo=1, routed)           0.000    35.293    interMasterDisplay/CON_A_OBUF_inst_i_29_n_0
+    SLICE_X83Y111        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    35.473 r  interMasterDisplay/CON_A_OBUF_inst_i_172/O[0]
+                         net (fo=3, routed)           1.211    36.684    interMasterDisplay/CON_A_OBUF_inst_i_172_n_7
+    SLICE_X94Y107        LUT5 (Prop_lut5_I3_O)        0.249    36.933 r  interMasterDisplay/CON_A_OBUF_inst_i_66/O
+                         net (fo=1, routed)           0.000    36.933    interMasterDisplay/display/DS6[1]
+    SLICE_X94Y107        MUXF7 (Prop_muxf7_I0_O)      0.173    37.106 r  interMasterDisplay/display/CON_A_OBUF_inst_i_19/O
+                         net (fo=1, routed)           0.907    38.013    interMasterDisplay/display/CON_A_OBUF_inst_i_19_n_0
+    SLICE_X103Y107       LUT6 (Prop_lut6_I0_O)        0.241    38.254 r  interMasterDisplay/display/CON_A_OBUF_inst_i_7/O
+                         net (fo=1, routed)           0.000    38.254    interMasterDisplay/display/CON_A_OBUF_inst_i_7_n_0
+    SLICE_X103Y107       MUXF7 (Prop_muxf7_I1_O)      0.182    38.436 r  interMasterDisplay/display/CON_A_OBUF_inst_i_2/O
+                         net (fo=8, routed)           1.433    39.869    interMasterDisplay/display/num_reg[2]_1
+    SLICE_X113Y87        LUT4 (Prop_lut4_I0_O)        0.252    40.121 r  interMasterDisplay/display/CON_B_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.365    41.486    CON_B_OBUF
+    P14                  OBUF (Prop_obuf_I_O)         3.303    44.789 r  CON_B_OBUF_inst/O
+                         net (fo=0)                   0.000    44.789    CON_B
+    P14                                                               r  CON_B (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 instructor/EN_num1_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            dataNum1/value_reg[29]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        27.259ns  (logic 8.189ns (30.041%)  route 19.070ns (69.959%))
+  Logic Levels:           38  (CARRY4=25 FDRE=1 LUT2=1 LUT3=5 LUT4=4 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X102Y64        FDRE                         0.000     0.000 r  instructor/EN_num1_reg/C
+    SLICE_X102Y64        FDRE (Prop_fdre_C_Q)         0.398     0.398 r  instructor/EN_num1_reg/Q
+                         net (fo=148, routed)         4.060     4.458    instructor/bus_en1
+    SLICE_X91Y83         LUT4 (Prop_lut4_I1_O)        0.232     4.690 r  instructor/value[31]_i_4__1/O
+                         net (fo=71, routed)          2.656     7.346    instructor/rst_reg_rep__0_1
+    SLICE_X99Y73         LUT6 (Prop_lut6_I1_O)        0.105     7.451 f  instructor/value[0]_i_164/O
+                         net (fo=59, routed)          3.193    10.643    dataNum1/value_reg[0]_i_372_1
+    SLICE_X95Y69         LUT3 (Prop_lut3_I2_O)        0.105    10.748 r  dataNum1/value[0]_i_63/O
+                         net (fo=3, routed)           0.831    11.579    dataNum1/value[0]_i_63_n_0
+    SLICE_X90Y63         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.430    12.009 r  dataNum1/value_reg[0]_i_426/CO[3]
+                         net (fo=1, routed)           0.000    12.009    dataNum1/value_reg[0]_i_426_n_0
+    SLICE_X90Y64         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    12.109 r  dataNum1/value_reg[0]_i_395/CO[3]
+                         net (fo=1, routed)           0.000    12.109    dataNum1/value_reg[0]_i_395_n_0
+    SLICE_X90Y65         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.257    12.366 r  dataNum1/value_reg[0]_i_358/O[1]
+                         net (fo=2, routed)           0.691    13.057    dataNum1/value_reg[0]_i_358_n_6
+    SLICE_X93Y66         LUT3 (Prop_lut3_I2_O)        0.259    13.316 r  dataNum1/value[0]_i_296/O
+                         net (fo=2, routed)           0.892    14.207    dataNum1/value[0]_i_296_n_0
+    SLICE_X93Y66         LUT4 (Prop_lut4_I3_O)        0.267    14.474 r  dataNum1/value[0]_i_300/O
+                         net (fo=1, routed)           0.000    14.474    dataNum1/value[0]_i_300_n_0
+    SLICE_X93Y66         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.931 r  dataNum1/value_reg[0]_i_203/CO[3]
+                         net (fo=1, routed)           0.000    14.931    dataNum1/value_reg[0]_i_203_n_0
+    SLICE_X93Y67         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    15.029 r  dataNum1/value_reg[0]_i_130/CO[3]
+                         net (fo=1, routed)           0.000    15.029    dataNum1/value_reg[0]_i_130_n_0
+    SLICE_X93Y68         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    15.127 r  dataNum1/value_reg[0]_i_52/CO[3]
+                         net (fo=1, routed)           0.000    15.127    dataNum1/value_reg[0]_i_52_n_0
+    SLICE_X93Y69         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    15.225 r  dataNum1/value_reg[0]_i_31/CO[3]
+                         net (fo=1, routed)           0.000    15.225    dataNum1/value_reg[0]_i_31_n_0
+    SLICE_X93Y70         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.260    15.485 r  dataNum1/value_reg[0]_i_28/O[3]
+                         net (fo=2, routed)           0.808    16.293    dataNum1/value_reg[0]_i_28_n_4
+    SLICE_X88Y72         LUT3 (Prop_lut3_I0_O)        0.276    16.569 r  dataNum1/value[7]_i_9/O
+                         net (fo=2, routed)           0.921    17.490    dataNum1/value[7]_i_9_n_0
+    SLICE_X88Y73         LUT4 (Prop_lut4_I3_O)        0.274    17.764 r  dataNum1/value[7]_i_13/O
+                         net (fo=1, routed)           0.000    17.764    dataNum1/value[7]_i_13_n_0
+    SLICE_X88Y73         CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.453    18.217 r  dataNum1/value_reg[7]_i_4/O[2]
+                         net (fo=6, routed)           1.027    19.244    dataNum1/value_reg[7]_i_4_n_5
+    SLICE_X89Y74         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.566    19.810 r  dataNum1/value_reg[0]_i_381/CO[3]
+                         net (fo=1, routed)           0.008    19.818    dataNum1/value_reg[0]_i_381_n_0
+    SLICE_X89Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.916 r  dataNum1/value_reg[0]_i_342/CO[3]
+                         net (fo=1, routed)           0.000    19.916    dataNum1/value_reg[0]_i_342_n_0
+    SLICE_X89Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    20.014 r  dataNum1/value_reg[0]_i_278/CO[3]
+                         net (fo=1, routed)           0.000    20.014    dataNum1/value_reg[0]_i_278_n_0
+    SLICE_X89Y77         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.260    20.274 r  dataNum1/value_reg[0]_i_196/O[3]
+                         net (fo=3, routed)           0.922    21.197    instructor/value_reg[0]_i_101[3]
+    SLICE_X87Y74         LUT4 (Prop_lut4_I2_O)        0.257    21.454 r  instructor/value[0]_i_270/O
+                         net (fo=1, routed)           0.000    21.454    dataNum1/value_reg[0]_i_101_0[3]
+    SLICE_X87Y74         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    21.786 r  dataNum1/value_reg[0]_i_178/CO[3]
+                         net (fo=1, routed)           0.008    21.794    dataNum1/value_reg[0]_i_178_n_0
+    SLICE_X87Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    21.892 r  dataNum1/value_reg[0]_i_101/CO[3]
+                         net (fo=1, routed)           0.000    21.892    dataNum1/value_reg[0]_i_101_n_0
+    SLICE_X87Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    21.990 r  dataNum1/value_reg[0]_i_34/CO[3]
+                         net (fo=1, routed)           0.000    21.990    dataNum1/value_reg[0]_i_34_n_0
+    SLICE_X87Y77         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    22.122 r  dataNum1/value_reg[0]_i_15/CO[1]
+                         net (fo=1, routed)           0.653    22.774    dataNum1/value_reg[0]_i_15_n_2
+    SLICE_X87Y78         LUT3 (Prop_lut3_I0_O)        0.275    23.049 r  dataNum1/value[0]_i_4/O
+                         net (fo=58, routed)          1.087    24.136    dataNum1/value[0]_i_4_n_0
+    SLICE_X92Y72         LUT3 (Prop_lut3_I1_O)        0.105    24.241 r  dataNum1/value[4]_i_5/O
+                         net (fo=1, routed)           0.479    24.721    dataNum1/value[4]_i_5_n_0
+    SLICE_X92Y74         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.494    25.215 r  dataNum1/value_reg[4]_i_3/CO[3]
+                         net (fo=1, routed)           0.008    25.223    dataNum1/value_reg[4]_i_3_n_0
+    SLICE_X92Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.323 r  dataNum1/value_reg[8]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.323    dataNum1/value_reg[8]_i_3_n_0
+    SLICE_X92Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.423 r  dataNum1/value_reg[12]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.423    dataNum1/value_reg[12]_i_3_n_0
+    SLICE_X92Y77         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.523 r  dataNum1/value_reg[16]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.523    dataNum1/value_reg[16]_i_3_n_0
+    SLICE_X92Y78         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.623 r  dataNum1/value_reg[20]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.623    dataNum1/value_reg[20]_i_3_n_0
+    SLICE_X92Y79         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.723 r  dataNum1/value_reg[24]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.723    dataNum1/value_reg[24]_i_3_n_0
+    SLICE_X92Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.823 r  dataNum1/value_reg[28]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.823    dataNum1/value_reg[28]_i_3_n_0
+    SLICE_X92Y81         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.207    26.030 f  dataNum1/value_reg[31]_i_5/CO[0]
+                         net (fo=3, routed)           0.268    26.298    instructor/CO[0]
+    SLICE_X90Y81         LUT2 (Prop_lut2_I1_O)        0.297    26.595 r  instructor/value[29]_i_2/O
+                         net (fo=1, routed)           0.560    27.154    instructor/value[29]_i_2_n_0
+    SLICE_X90Y81         LUT6 (Prop_lut6_I5_O)        0.105    27.259 r  instructor/value[29]_i_1/O
+                         net (fo=1, routed)           0.000    27.259    dataNum1/value_reg[31]_1[28]
+    SLICE_X90Y81         FDRE                                         r  dataNum1/value_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 instructor/EN_num1_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            dataNum1/value_reg[26]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        26.900ns  (logic 7.982ns (29.673%)  route 18.918ns (70.327%))
+  Logic Levels:           36  (CARRY4=24 FDRE=1 LUT3=5 LUT4=4 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X102Y64        FDRE                         0.000     0.000 r  instructor/EN_num1_reg/C
+    SLICE_X102Y64        FDRE (Prop_fdre_C_Q)         0.398     0.398 r  instructor/EN_num1_reg/Q
+                         net (fo=148, routed)         4.060     4.458    instructor/bus_en1
+    SLICE_X91Y83         LUT4 (Prop_lut4_I1_O)        0.232     4.690 r  instructor/value[31]_i_4__1/O
+                         net (fo=71, routed)          2.656     7.346    instructor/rst_reg_rep__0_1
+    SLICE_X99Y73         LUT6 (Prop_lut6_I1_O)        0.105     7.451 f  instructor/value[0]_i_164/O
+                         net (fo=59, routed)          3.193    10.643    dataNum1/value_reg[0]_i_372_1
+    SLICE_X95Y69         LUT3 (Prop_lut3_I2_O)        0.105    10.748 r  dataNum1/value[0]_i_63/O
+                         net (fo=3, routed)           0.831    11.579    dataNum1/value[0]_i_63_n_0
+    SLICE_X90Y63         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.430    12.009 r  dataNum1/value_reg[0]_i_426/CO[3]
+                         net (fo=1, routed)           0.000    12.009    dataNum1/value_reg[0]_i_426_n_0
+    SLICE_X90Y64         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    12.109 r  dataNum1/value_reg[0]_i_395/CO[3]
+                         net (fo=1, routed)           0.000    12.109    dataNum1/value_reg[0]_i_395_n_0
+    SLICE_X90Y65         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.257    12.366 r  dataNum1/value_reg[0]_i_358/O[1]
+                         net (fo=2, routed)           0.691    13.057    dataNum1/value_reg[0]_i_358_n_6
+    SLICE_X93Y66         LUT3 (Prop_lut3_I2_O)        0.259    13.316 r  dataNum1/value[0]_i_296/O
+                         net (fo=2, routed)           0.892    14.207    dataNum1/value[0]_i_296_n_0
+    SLICE_X93Y66         LUT4 (Prop_lut4_I3_O)        0.267    14.474 r  dataNum1/value[0]_i_300/O
+                         net (fo=1, routed)           0.000    14.474    dataNum1/value[0]_i_300_n_0
+    SLICE_X93Y66         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.457    14.931 r  dataNum1/value_reg[0]_i_203/CO[3]
+                         net (fo=1, routed)           0.000    14.931    dataNum1/value_reg[0]_i_203_n_0
+    SLICE_X93Y67         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    15.029 r  dataNum1/value_reg[0]_i_130/CO[3]
+                         net (fo=1, routed)           0.000    15.029    dataNum1/value_reg[0]_i_130_n_0
+    SLICE_X93Y68         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    15.127 r  dataNum1/value_reg[0]_i_52/CO[3]
+                         net (fo=1, routed)           0.000    15.127    dataNum1/value_reg[0]_i_52_n_0
+    SLICE_X93Y69         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    15.225 r  dataNum1/value_reg[0]_i_31/CO[3]
+                         net (fo=1, routed)           0.000    15.225    dataNum1/value_reg[0]_i_31_n_0
+    SLICE_X93Y70         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.260    15.485 r  dataNum1/value_reg[0]_i_28/O[3]
+                         net (fo=2, routed)           0.808    16.293    dataNum1/value_reg[0]_i_28_n_4
+    SLICE_X88Y72         LUT3 (Prop_lut3_I0_O)        0.276    16.569 r  dataNum1/value[7]_i_9/O
+                         net (fo=2, routed)           0.921    17.490    dataNum1/value[7]_i_9_n_0
+    SLICE_X88Y73         LUT4 (Prop_lut4_I3_O)        0.274    17.764 r  dataNum1/value[7]_i_13/O
+                         net (fo=1, routed)           0.000    17.764    dataNum1/value[7]_i_13_n_0
+    SLICE_X88Y73         CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.453    18.217 r  dataNum1/value_reg[7]_i_4/O[2]
+                         net (fo=6, routed)           1.027    19.244    dataNum1/value_reg[7]_i_4_n_5
+    SLICE_X89Y74         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.566    19.810 r  dataNum1/value_reg[0]_i_381/CO[3]
+                         net (fo=1, routed)           0.008    19.818    dataNum1/value_reg[0]_i_381_n_0
+    SLICE_X89Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    19.916 r  dataNum1/value_reg[0]_i_342/CO[3]
+                         net (fo=1, routed)           0.000    19.916    dataNum1/value_reg[0]_i_342_n_0
+    SLICE_X89Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    20.014 r  dataNum1/value_reg[0]_i_278/CO[3]
+                         net (fo=1, routed)           0.000    20.014    dataNum1/value_reg[0]_i_278_n_0
+    SLICE_X89Y77         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.260    20.274 r  dataNum1/value_reg[0]_i_196/O[3]
+                         net (fo=3, routed)           0.922    21.197    instructor/value_reg[0]_i_101[3]
+    SLICE_X87Y74         LUT4 (Prop_lut4_I2_O)        0.257    21.454 r  instructor/value[0]_i_270/O
+                         net (fo=1, routed)           0.000    21.454    dataNum1/value_reg[0]_i_101_0[3]
+    SLICE_X87Y74         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.332    21.786 r  dataNum1/value_reg[0]_i_178/CO[3]
+                         net (fo=1, routed)           0.008    21.794    dataNum1/value_reg[0]_i_178_n_0
+    SLICE_X87Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    21.892 r  dataNum1/value_reg[0]_i_101/CO[3]
+                         net (fo=1, routed)           0.000    21.892    dataNum1/value_reg[0]_i_101_n_0
+    SLICE_X87Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.098    21.990 r  dataNum1/value_reg[0]_i_34/CO[3]
+                         net (fo=1, routed)           0.000    21.990    dataNum1/value_reg[0]_i_34_n_0
+    SLICE_X87Y77         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.132    22.122 r  dataNum1/value_reg[0]_i_15/CO[1]
+                         net (fo=1, routed)           0.653    22.774    dataNum1/value_reg[0]_i_15_n_2
+    SLICE_X87Y78         LUT3 (Prop_lut3_I0_O)        0.275    23.049 r  dataNum1/value[0]_i_4/O
+                         net (fo=58, routed)          1.087    24.136    dataNum1/value[0]_i_4_n_0
+    SLICE_X92Y72         LUT3 (Prop_lut3_I1_O)        0.105    24.241 r  dataNum1/value[4]_i_5/O
+                         net (fo=1, routed)           0.479    24.721    dataNum1/value[4]_i_5_n_0
+    SLICE_X92Y74         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.494    25.215 r  dataNum1/value_reg[4]_i_3/CO[3]
+                         net (fo=1, routed)           0.008    25.223    dataNum1/value_reg[4]_i_3_n_0
+    SLICE_X92Y75         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.323 r  dataNum1/value_reg[8]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.323    dataNum1/value_reg[8]_i_3_n_0
+    SLICE_X92Y76         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.423 r  dataNum1/value_reg[12]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.423    dataNum1/value_reg[12]_i_3_n_0
+    SLICE_X92Y77         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.523 r  dataNum1/value_reg[16]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.523    dataNum1/value_reg[16]_i_3_n_0
+    SLICE_X92Y78         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.623 r  dataNum1/value_reg[20]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.623    dataNum1/value_reg[20]_i_3_n_0
+    SLICE_X92Y79         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.100    25.723 r  dataNum1/value_reg[24]_i_3/CO[3]
+                         net (fo=1, routed)           0.000    25.723    dataNum1/value_reg[24]_i_3_n_0
+    SLICE_X92Y80         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.257    25.980 r  dataNum1/value_reg[28]_i_3/O[1]
+                         net (fo=1, routed)           0.675    26.655    instructor/value_reg[28]_19[1]
+    SLICE_X92Y82         LUT5 (Prop_lut5_I2_O)        0.245    26.900 r  instructor/value[26]_i_1/O
+                         net (fo=1, routed)           0.000    26.900    dataNum1/value_reg[31]_1[25]
+    SLICE_X92Y82         FDRE                                         r  dataNum1/value_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 debounce/temp_C_reg[4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            debounce/temp_B_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.262ns  (logic 0.141ns (53.891%)  route 0.121ns (46.109%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y114       FDRE                         0.000     0.000 r  debounce/temp_C_reg[4]/C
+    SLICE_X110Y114       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  debounce/temp_C_reg[4]/Q
+                         net (fo=2, routed)           0.121     0.262    debounce/temp_C[4]
+    SLICE_X111Y114       FDRE                                         r  debounce/temp_B_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 debounce/temp_D_reg[4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            debounce/temp_C_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.262ns  (logic 0.141ns (53.788%)  route 0.121ns (46.212%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y114       FDRE                         0.000     0.000 r  debounce/temp_D_reg[4]/C
+    SLICE_X110Y114       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  debounce/temp_D_reg[4]/Q
+                         net (fo=2, routed)           0.121     0.262    debounce/temp_D[4]
+    SLICE_X110Y114       FDRE                                         r  debounce/temp_C_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 debounce/temp_A_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            debounce/out_key_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.264ns  (logic 0.141ns (53.316%)  route 0.123ns (46.684%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y113       FDRE                         0.000     0.000 r  debounce/temp_A_reg[0]/C
+    SLICE_X110Y113       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  debounce/temp_A_reg[0]/Q
+                         net (fo=2, routed)           0.123     0.264    debounce/temp_A[0]
+    SLICE_X111Y112       FDRE                                         r  debounce/out_key_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 debounce/temp_A_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            debounce/out_key_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.265ns  (logic 0.141ns (53.280%)  route 0.124ns (46.720%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y113       FDRE                         0.000     0.000 r  debounce/temp_A_reg[3]/C
+    SLICE_X110Y113       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  debounce/temp_A_reg[3]/Q
+                         net (fo=2, routed)           0.124     0.265    debounce/temp_A[3]
+    SLICE_X110Y112       FDRE                                         r  debounce/out_key_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 debounce/temp_B_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            debounce/temp_A_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.265ns  (logic 0.141ns (53.132%)  route 0.124ns (46.868%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y114       FDRE                         0.000     0.000 r  debounce/temp_B_reg[1]/C
+    SLICE_X111Y114       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  debounce/temp_B_reg[1]/Q
+                         net (fo=2, routed)           0.124     0.265    debounce/temp_B[1]
+    SLICE_X111Y114       FDRE                                         r  debounce/temp_A_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 debounce/temp_B_reg[4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            debounce/temp_A_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.265ns  (logic 0.141ns (53.132%)  route 0.124ns (46.868%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y114       FDRE                         0.000     0.000 r  debounce/temp_B_reg[4]/C
+    SLICE_X111Y114       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  debounce/temp_B_reg[4]/Q
+                         net (fo=2, routed)           0.124     0.265    debounce/temp_B[4]
+    SLICE_X111Y114       FDRE                                         r  debounce/temp_A_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 debounce/temp_D_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            debounce/temp_C_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.270ns  (logic 0.164ns (60.756%)  route 0.106ns (39.244%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y114       FDRE                         0.000     0.000 r  debounce/temp_D_reg[3]/C
+    SLICE_X112Y114       FDRE (Prop_fdre_C_Q)         0.164     0.164 r  debounce/temp_D_reg[3]/Q
+                         net (fo=2, routed)           0.106     0.270    debounce/temp_D[3]
+    SLICE_X110Y113       FDRE                                         r  debounce/temp_C_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 keyboard/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            keyboard/FSM_onehot_state_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.271ns  (logic 0.141ns (52.082%)  route 0.130ns (47.918%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y119       FDRE                         0.000     0.000 r  keyboard/FSM_onehot_state_reg[2]/C
+    SLICE_X113Y119       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  keyboard/FSM_onehot_state_reg[2]/Q
+                         net (fo=4, routed)           0.130     0.271    keyboard/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X113Y119       FDRE                                         r  keyboard/FSM_onehot_state_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 debounce/temp_A_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            debounce/out_key_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.271ns  (logic 0.141ns (51.977%)  route 0.130ns (48.023%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y114       FDRE                         0.000     0.000 r  debounce/temp_A_reg[1]/C
+    SLICE_X111Y114       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  debounce/temp_A_reg[1]/Q
+                         net (fo=2, routed)           0.130     0.271    debounce/temp_A[1]
+    SLICE_X110Y112       FDRE                                         r  debounce/out_key_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 debounce/temp_D_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            debounce/temp_C_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.273ns  (logic 0.141ns (51.726%)  route 0.132ns (48.274%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y114       FDRE                         0.000     0.000 r  debounce/temp_D_reg[1]/C
+    SLICE_X110Y114       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  debounce/temp_D_reg[1]/Q
+                         net (fo=2, routed)           0.132     0.273    debounce/temp_D[1]
+    SLICE_X110Y114       FDRE                                         r  debounce/temp_C_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
